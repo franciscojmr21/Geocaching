@@ -1,0 +1,17 @@
+Descargar carpeta desde 0:
+
+git init
+git remote add origin https://github.com/franciscojmr21/Geocaching.git
+git pull origin main
+
+
+Obtener los cambios realizados:
+
+git pull origin main
+
+
+Subir los cambios al repositorio:
+
+git add .
+git commit -m "comentario_de_los_cambios"
+git push -u origin main
