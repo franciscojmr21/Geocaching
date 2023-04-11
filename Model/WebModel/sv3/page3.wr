@@ -1,0 +1,80 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="70" gr:y="130" id="sv3#page3" name="Inicio">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="85" gr:y="0" id="sv3#page3#pwu1" name="Geocaches" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att6 ent1#att10 ent1#att11"/>
+    <EntryUnit gr:x="205" gr:y="5" id="sv3#page3#enu3" name="Create Geocach" entity="ent1" linkOrder="sv3#page3#enu3#ln4">
+      <Field id="sv3#page3#enu3#fld6" name="name" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Field id="sv3#page3#enu3#fld7" name="description" type="text" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv3#page3#enu3#fld9" name="dificulty" type="string" modifiable="true" attribute="ent1#att10"/>
+      <Field id="sv3#page3#enu3#fld10" name="size" type="string" modifiable="true" attribute="ent1#att11"/>
+      <Link id="sv3#page3#enu3#ln3" name="Flow3" to="sv3#cru2" type="transport" validate="true">
+        <LinkParameter id="sv3#page3#enu3#ln3#par10" name="description_description" source="sv3#page3#enu3#fld7" target="sv3#cru2.ent1#att3"/>
+        <LinkParameter id="sv3#page3#enu3#ln3#par11" name="dificulty_dificulty" source="sv3#page3#enu3#fld9" target="sv3#cru2.ent1#att10"/>
+        <LinkParameter id="sv3#page3#enu3#ln3#par12" name="name_name" source="sv3#page3#enu3#fld6" target="sv3#cru2.ent1#att2"/>
+        <LinkParameter id="sv3#page3#enu3#ln3#par13" name="size_size" source="sv3#page3#enu3#fld10" target="sv3#cru2.ent1#att11"/>
+      </Link>
+      <Link id="sv3#page3#enu3#ln4" name="Create Geocach" to="sv3#tmu1" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="0" gr:y="20" id="sv3#page3#mssu3" name="Error"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page3#pwu1">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att10"/>
+          <layout:Attribute attribute="ent1#att11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page3#enu3">
+          <layout:Link link="sv3#page3#enu3#ln4"/>
+          <layout:Field field="sv3#page3#enu3#fld6"/>
+          <layout:Field field="sv3#page3#enu3#fld7"/>
+          <layout:Field field="sv3#page3#enu3#fld9"/>
+          <layout:Field field="sv3#page3#enu3#fld10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page3#mssu3"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

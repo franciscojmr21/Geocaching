@@ -1,9 +1,11 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="10" gr:y="165" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="10" gr:y="165" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att12 User#att14" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
     <Attribute name="email" id="email" type="string" db:column="email"/>
+    <Attribute id="User#att12" name="rol" type="string" derivationQuery="simpleImported::Self.User2DefaultGroup.groupName"/>
+    <Attribute id="User#att14" name="fecha_alta" type="timestamp" db:column="fecha_alta"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="178" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
@@ -60,7 +62,7 @@
     <Attribute id="ent1#att3" name="description" type="text" db:column="description"/>
     <Attribute id="ent1#att4" name="latitude" type="float" db:column="latitude"/>
     <Attribute id="ent1#att5" name="longitude" type="float" db:column="longitude"/>
-    <Attribute id="ent1#att6" name="creation_date" type="date" db:column="creation_date"/>
+    <Attribute id="ent1#att6" name="creation_date" type="timestamp" db:column="creation_date"/>
     <Attribute id="ent1#att7" name="last_modify" type="date" db:column="last_modify"/>
     <Attribute id="ent1#att10" name="dificulty" type="string" db:column="dificulty"/>
     <Attribute id="ent1#att11" name="size" type="string" db:column="size"/>

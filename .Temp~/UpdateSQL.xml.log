@@ -1,46 +1,26 @@
-[11 abr 2023 19:09:59] DEBUG Executing SQL script
-[11 abr 2023 19:09:59] INFO ================================================================================
-[11 abr 2023 19:09:59] INFO onError= 'stop'
-[11 abr 2023 19:09:59] INFO autoCommit= 'false'
-[11 abr 2023 19:09:59] INFO username= 'postgres'
-[11 abr 2023 19:09:59] INFO outputPath= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml'
-[11 abr 2023 19:09:59] INFO outputLogPath= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml.log'
-[11 abr 2023 19:09:59] INFO encoding= ''
-[11 abr 2023 19:09:59] INFO driverClass= 'org.postgresql.Driver'
-[11 abr 2023 19:09:59] INFO sqlScript= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql'
-[11 abr 2023 19:09:59] INFO eventSocketPort= '57030'
-[11 abr 2023 19:09:59] INFO statementSeparator= ';'
-[11 abr 2023 19:09:59] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[11 abr 2023 19:09:59] INFO password= 'admin'
-[11 abr 2023 19:09:59] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
-[11 abr 2023 19:09:59] INFO ================================================================================
-[11 abr 2023 19:09:59] INFO Connecting to the Database...
-[11 abr 2023 19:09:59] INFO Database connection estabilished
-[11 abr 2023 19:09:59] INFO transaction isolation: 2
-[11 abr 2023 19:09:59] DEBUG ================================================================================
-[11 abr 2023 19:09:59] DEBUG Executing SQL script file: D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql
-[11 abr 2023 19:09:59] DEBUG Executing statement:  create table "public"."group" ( "oid"  int4  not null, "groupname"  varchar(255), primary key ("oid") )
-[11 abr 2023 19:09:59] DEBUG Executing statement:    create table "public"."module" ( "oid"  int4  not null, "moduleid"  varchar(255), "modulename"  varchar(255), primary key ("oid") )
-[11 abr 2023 19:09:59] DEBUG Executing statement:    create table "public"."user" ( "oid"  int4  not null, "username"  varchar(255), "password"  varchar(255), "email"  varchar(255), primary key ("oid") )
-[11 abr 2023 19:09:59] DEBUG Executing statement:    create table "public"."geocach" ( "oid"  int4  not null, "name"  varchar(255), "description"  text, "latitude"  float8, "longitude"  float8, "creation_date"  date, "last_modify"  date, "dificulty"  varchar(255), "size"  varchar(255), primary key ("oid") )
-[11 abr 2023 19:09:59] DEBUG Executing statement:    alter table "public"."group"  add column  "module_oid"  int4
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."group"   add constraint fk_group_module foreign key ("module_oid") references "public"."module" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:    create table "public"."group_module" ( "group_oid"  int4 not null, "module_oid"  int4 not null, primary key ("group_oid", "module_oid") )
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."group_module"   add constraint fk_group_module_group foreign key ("group_oid") references "public"."group" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."group_module"   add constraint fk_group_module_module foreign key ("module_oid") references "public"."module" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:    alter table "public"."user"  add column  "group_oid"  int4
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."user"   add constraint fk_user_group foreign key ("group_oid") references "public"."group" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:    create table "public"."user_group" ( "user_oid"  int4 not null, "group_oid"  int4 not null, primary key ("user_oid", "group_oid") )
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."user_group"   add constraint fk_user_group_user foreign key ("user_oid") references "public"."user" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."user_group"   add constraint fk_user_group_group foreign key ("group_oid") references "public"."group" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:    alter table "public"."user"  add column  "user_oid"  int4
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."user"   add constraint fk_user_user foreign key ("user_oid") references "public"."user" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:    alter table "public"."geocach"  add column  "user_oid"  int4
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."geocach"   add constraint fk_geocach_user foreign key ("user_oid") references "public"."user" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:    create table "public"."find_geocach" ( "user_oid"  int4 not null, "geocach_oid"  int4 not null, primary key ("user_oid", "geocach_oid") )
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."find_geocach"   add constraint fk_find_geocach_user foreign key ("user_oid") references "public"."user" ("oid")
-[11 abr 2023 19:09:59] DEBUG Executing statement:  alter table "public"."find_geocach"   add constraint fk_find_geocach_geocach foreign key ("geocach_oid") references "public"."geocach" ("oid")
-[11 abr 2023 19:09:59] DEBUG ================================================================================
-[11 abr 2023 19:09:59] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[11 abr 2023 19:09:59] INFO Database connection closed
-[11 abr 2023 19:09:59] DEBUG Total time: 923 milliseconds
+[11 abr 2023 21:36:56] DEBUG Executing SQL script
+[11 abr 2023 21:36:56] INFO ================================================================================
+[11 abr 2023 21:36:56] INFO onError= 'stop'
+[11 abr 2023 21:36:56] INFO autoCommit= 'false'
+[11 abr 2023 21:36:56] INFO username= 'postgres'
+[11 abr 2023 21:36:56] INFO outputPath= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml'
+[11 abr 2023 21:36:56] INFO outputLogPath= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml.log'
+[11 abr 2023 21:36:56] INFO encoding= ''
+[11 abr 2023 21:36:56] INFO driverClass= 'org.postgresql.Driver'
+[11 abr 2023 21:36:56] INFO sqlScript= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql'
+[11 abr 2023 21:36:56] INFO eventSocketPort= '49631'
+[11 abr 2023 21:36:56] INFO statementSeparator= ';'
+[11 abr 2023 21:36:56] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[11 abr 2023 21:36:56] INFO password= 'admin'
+[11 abr 2023 21:36:56] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
+[11 abr 2023 21:36:56] INFO ================================================================================
+[11 abr 2023 21:36:56] INFO Connecting to the Database...
+[11 abr 2023 21:36:56] INFO Database connection estabilished
+[11 abr 2023 21:36:56] INFO transaction isolation: 2
+[11 abr 2023 21:36:56] DEBUG ================================================================================
+[11 abr 2023 21:36:56] DEBUG Executing SQL script file: D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql
+[11 abr 2023 21:36:56] DEBUG Executing statement:  alter table "public"."user"  add column  "fecha_alta"  timestamp
+[11 abr 2023 21:36:56] DEBUG ================================================================================
+[11 abr 2023 21:36:56] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[11 abr 2023 21:36:56] INFO Database connection closed
+[11 abr 2023 21:36:56] DEBUG Total time: 188 milliseconds

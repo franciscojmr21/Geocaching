@@ -3,7 +3,7 @@
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page1#enu1" name="Login" entity="User" linkOrder="sv1#page1#enu1#ln1">
       <Field id="sv1#page1#enu1#fld1" name="userName" type="string" modifiable="true" attribute="userName"/>
       <Field id="sv1#page1#enu1#fld2" name="password" type="password" modifiable="true" attribute="password"/>
-      <Link id="sv1#page1#enu1#ln1" name="Flow1" to="sv1#lgu1" type="normal" validate="true">
+      <Link id="sv1#page1#enu1#ln1" name="Login" to="sv1#lgu1" type="normal" validate="true">
         <LinkParameter id="sv1#page1#enu1#ln1#par1" name="userName_Username" source="sv1#page1#enu1#fld1" target="sv1#lgu1.username"/>
         <LinkParameter id="sv1#page1#enu1#ln1#par2" name="password_Password" source="sv1#page1#enu1#fld2" target="sv1#lgu1.password"/>
       </Link>
