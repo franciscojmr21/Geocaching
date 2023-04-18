@@ -1,11 +1,11 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="205" gr:y="5" id="sv2#page2" name="Inicio">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="130" id="sv2#page2#inu1" name="Users" entity="User" displayAttributes="userName password User#att12 User#att14"/>
+    <IndexUnit gr:x="0" gr:y="130" id="sv2#page2#inu1" name="Users" entity="User" displayAttributes="userName password User#att12 User#att14" customDescriptor="false"/>
     <EntryUnit gr:x="85" gr:y="155" id="sv2#page2#enu2" name="Create User" entity="User" linkOrder="sv2#page2#enu2#ln7">
-      <Field id="sv2#page2#enu2#fld3" name="userName" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv2#page2#enu2#fld4" name="password" type="password" modifiable="true" attribute="password"/>
-      <Field id="sv2#page2#enu2#fld5" name="email" type="string" modifiable="true" attribute="email"/>
-      <SelectionField id="sv2#page2#enu2#sfld2" type="string" name="rol"/>
+      <Field id="sv2#page2#enu2#fld3" name="Nombre Usuario" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv2#page2#enu2#fld4" name="Contrase&#241;a" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv2#page2#enu2#fld5" name="Correo" type="string" modifiable="true" attribute="email"/>
+      <SelectionField id="sv2#page2#enu2#sfld2" type="string" name="Rol"/>
       <Link id="sv2#page2#enu2#ln5" name="Flow5" to="sv2#cru1" type="transport" validate="true">
         <LinkParameter id="sv2#page2#enu2#ln5#par17" name="email_email" source="sv2#page2#enu2#fld5" target="sv2#cru1.email"/>
         <LinkParameter id="sv2#page2#enu2#ln5#par19" name="password_password" source="sv2#page2#enu2#fld4" target="sv2#cru1.password"/>

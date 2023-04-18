@@ -1,26 +1,27 @@
-[11 abr 2023 21:36:56] DEBUG Executing SQL script
-[11 abr 2023 21:36:56] INFO ================================================================================
-[11 abr 2023 21:36:56] INFO onError= 'stop'
-[11 abr 2023 21:36:56] INFO autoCommit= 'false'
-[11 abr 2023 21:36:56] INFO username= 'postgres'
-[11 abr 2023 21:36:56] INFO outputPath= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml'
-[11 abr 2023 21:36:56] INFO outputLogPath= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml.log'
-[11 abr 2023 21:36:56] INFO encoding= ''
-[11 abr 2023 21:36:56] INFO driverClass= 'org.postgresql.Driver'
-[11 abr 2023 21:36:56] INFO sqlScript= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql'
-[11 abr 2023 21:36:56] INFO eventSocketPort= '49631'
-[11 abr 2023 21:36:56] INFO statementSeparator= ';'
-[11 abr 2023 21:36:56] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[11 abr 2023 21:36:56] INFO password= 'admin'
-[11 abr 2023 21:36:56] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
-[11 abr 2023 21:36:56] INFO ================================================================================
-[11 abr 2023 21:36:56] INFO Connecting to the Database...
-[11 abr 2023 21:36:56] INFO Database connection estabilished
-[11 abr 2023 21:36:56] INFO transaction isolation: 2
-[11 abr 2023 21:36:56] DEBUG ================================================================================
-[11 abr 2023 21:36:56] DEBUG Executing SQL script file: D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql
-[11 abr 2023 21:36:56] DEBUG Executing statement:  alter table "public"."user"  add column  "fecha_alta"  timestamp
-[11 abr 2023 21:36:56] DEBUG ================================================================================
-[11 abr 2023 21:36:56] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[11 abr 2023 21:36:56] INFO Database connection closed
-[11 abr 2023 21:36:56] DEBUG Total time: 188 milliseconds
+[18 abr 2023 21:31:33] DEBUG Executing SQL script
+[18 abr 2023 21:31:33] INFO ================================================================================
+[18 abr 2023 21:31:33] INFO onError= 'stop'
+[18 abr 2023 21:31:33] INFO autoCommit= 'false'
+[18 abr 2023 21:31:33] INFO username= 'postgres'
+[18 abr 2023 21:31:33] INFO outputPath= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml'
+[18 abr 2023 21:31:33] INFO outputLogPath= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml.log'
+[18 abr 2023 21:31:33] INFO encoding= ''
+[18 abr 2023 21:31:33] INFO driverClass= 'org.postgresql.Driver'
+[18 abr 2023 21:31:33] INFO sqlScript= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql'
+[18 abr 2023 21:31:33] INFO eventSocketPort= '50934'
+[18 abr 2023 21:31:33] INFO statementSeparator= ';'
+[18 abr 2023 21:31:33] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[18 abr 2023 21:31:33] INFO password= 'admin'
+[18 abr 2023 21:31:33] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
+[18 abr 2023 21:31:33] INFO ================================================================================
+[18 abr 2023 21:31:33] INFO Connecting to the Database...
+[18 abr 2023 21:31:33] INFO Database connection estabilished
+[18 abr 2023 21:31:33] INFO transaction isolation: 2
+[18 abr 2023 21:31:33] DEBUG ================================================================================
+[18 abr 2023 21:31:33] DEBUG Executing SQL script file: D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql
+[18 abr 2023 21:31:34] DEBUG Executing statement:  create table "public"."dificultad" ( "oid"  int4  not null, "nombre"  varchar(255), primary key ("oid") )
+[18 abr 2023 21:31:34] DEBUG Executing statement:    create table "public"."size" ( "oid"  int4  not null, "nombre"  varchar(255), primary key ("oid") )
+[18 abr 2023 21:31:34] DEBUG ================================================================================
+[18 abr 2023 21:31:34] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[18 abr 2023 21:31:34] INFO Database connection closed
+[18 abr 2023 21:31:34] DEBUG Total time: 612 milliseconds

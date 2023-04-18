@@ -83,5 +83,14 @@
       <db:JoinColumn attribute="ent1#att1" name="geocach_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public"/>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public">
+  </db:Database>
+  <Entity gr:x="495" gr:y="370" id="ent3" name="Dificultad" duration="persistent" attributeOrder="ent3#att9 ent3#att13" db:database="db1" db:table="dificultad">
+    <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent3#att13" name="nombre" type="string" db:column="nombre"/>
+  </Entity>
+  <Entity id="ent4" name="Size" duration="persistent" attributeOrder="ent4#att15 ent4#att16" gr:x="495" gr:y="455" db:database="db1" db:table="size">
+    <Attribute id="ent4#att15" name="oid" key="true" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att16" name="nombre" type="string" db:column="nombre"/>
+  </Entity>
 </DataModel>
