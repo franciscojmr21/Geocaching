@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Private" protected="true" homePage="sv2#page2" landmarks="sv2#lou1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Private" protected="true" landmarks="sv2#lou1" homePage="sv2#page2">
   <OperationUnits>
     <CreateUnit gr:x="240" gr:y="375" id="sv2#cru1" name="Create1" entity="User">
       <KOLink id="sv2#cru1#kln2" name="KOFlow2" to="sv2#page2#mssu2">
@@ -6,12 +6,6 @@
       </KOLink>
       <OKLink id="sv2#cru1#oln1" name="OKFlow1" to="sv2#page2" automaticCoupling="true" gr:bendpoints="-37,-99,-117,101"/>
     </CreateUnit>
-    <SelectorUnit gr:x="365" gr:y="385" id="sv2#seu2" name="Rol Selector" entity="Group">
-      <Link id="sv2#seu2#ln6" name="OKFlow4" to="sv2#page2#enu2" type="transport">
-        <LinkParameter id="sv2#seu2#ln6#par21" name="groupName_rol [output]" source="groupOIDArray" target="sv2#page2#enu2#sfld2_output"/>
-        <LinkParameter id="sv2#seu2#ln6#par22" name="groupName_rol [label]" source="groupNameArray" target="sv2#page2#enu2#sfld2_label"/>
-      </Link>
-    </SelectorUnit>
     <TimeUnit gr:x="85" gr:y="300" id="sv2#tmu2" name="Time2">
       <OKLink id="sv2#tmu2#oln5" name="OKFlow5" to="sv2#cru1">
         <LinkParameter id="sv2#tmu2#oln5#par24" name="Current/Input Timestamp_fecha_alta" source="currentTimestamp" target="sv2#cru1.User#att14"/>

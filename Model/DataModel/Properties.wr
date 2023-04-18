@@ -83,6 +83,5 @@
       <db:JoinColumn attribute="ent1#att1" name="geocach_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public"/>
 </DataModel>

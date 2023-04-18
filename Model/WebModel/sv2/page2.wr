@@ -15,6 +15,12 @@
       <Link id="sv2#page2#enu2#ln7" name="Create User" to="sv2#tmu2" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
     <MultiMessageUnit gr:x="190" gr:y="55" id="sv2#page2#mssu2" name="Message2"/>
+    <SelectorUnit id="sv2#page2#seu1" name="Rol Selector" gr:x="0" gr:y="0" entity="Group">
+      <Link id="sv2#page2#seu1#ln2" name="OKFlow4" to="sv2#page2#enu2" type="transport">
+        <LinkParameter id="sv2#page2#seu1#ln2#par4" name="groupName_rol [output]" source="groupOIDArray" target="sv2#page2#enu2#sfld2_output"/>
+        <LinkParameter id="sv2#page2#seu1#ln2#par5" name="groupName_rol [label]" source="groupNameArray" target="sv2#page2#enu2#sfld2_label"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
