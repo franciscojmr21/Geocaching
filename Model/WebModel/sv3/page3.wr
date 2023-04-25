@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="70" gr:y="10" id="sv3#page3" name="Inicio">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="70" gr:y="10" id="sv3#page3" name="New Geocach" landmark="true">
   <ContentUnits>
     <PowerIndexUnit gr:x="85" gr:y="120" id="sv3#page3#pwu1" name="Geocaches" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att6 ent1#att10 ent1#att11"/>
     <EntryUnit gr:x="225" gr:y="130" id="sv3#page3#enu3" name="Create Geocach" entity="ent1" linkOrder="sv3#page3#enu3#ln4" fieldOrder="sv3#page3#enu3#fld6 sv3#page3#enu3#sfld3 sv3#page3#enu3#sfld1 sv3#page3#enu3#fld7 sv3#page3#enu3#fld8 sv3#page3#enu3#fld9">
@@ -32,10 +32,6 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="4"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
       <layout:Cell colspan="8">
         <layout:Unit unitId="sv3#page3#pwu1">
           <layout:Attribute attribute="ent1#att2"/>
@@ -51,12 +47,12 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
       <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="8">
         <layout:Unit unitId="sv3#page3#enu3">
           <layout:Link link="sv3#page3#enu3#ln4"/>
@@ -75,12 +71,12 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
       <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="8">
         <layout:Unit unitId="sv3#page3#mssu3"/>
       </layout:Cell>
@@ -88,6 +84,10 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
