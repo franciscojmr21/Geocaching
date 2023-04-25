@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="UserHome" protected="true" homePage="sv3#page3" landmarks="sv3#lou2">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="UserHome" protected="true" homePage="sv3#page3" landmarks="sv3#lou2 sv3#page4">
   <OperationUnits>
     <CreateUnit gr:x="95" gr:y="335" id="sv3#cru2" name="Create Geocach" entity="ent1">
       <OKLink id="sv3#cru2#oln3" name="OKFlow3" to="sv3#page3" automaticCoupling="true"/>
@@ -13,5 +13,13 @@
       </OKLink>
     </TimeUnit>
     <LogoutUnit gr:x="70" gr:y="40" id="sv3#lou2" name="Logout" siteView="sv1" landmark="true"/>
+    <StringsFunctionUnit gr:x="800" gr:y="220" id="sv3#sfu1" name="Strings Function Unit1" mode="concatStrings" substringType="byIndex" substringMode="afterSeparator" encryptAlgorithm="com.webratio.rtx.core.DES3UnicodeCryptImplementation" separator="latitud, longitud">
+      <String id="sv3#sfu1#str1" name="latitud"/>
+      <String id="sv3#sfu1#str2" name="longitud"/>
+      <OKLink id="sv3#sfu1#oln6" name="OKFlow6" to="sv3#page4#gmu1">
+        <LinkParameter id="sv3#sfu1#oln6#par27" name="Result String_Marker Coordinates" source="resultString" target="sv3#page4#gmu1.markerCoords"/>
+        <LinkParameter id="sv3#sfu1#oln6#par28" name="Geocach_Marker Title" sourceValue="Geocach" target="sv3#page4#gmu1.markerTitle"/>
+      </OKLink>
+    </StringsFunctionUnit>
   </OperationUnits>
 </SiteView>
