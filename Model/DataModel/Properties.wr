@@ -56,7 +56,7 @@
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="140" gr:y="360" id="ent1" name="Geocach" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att10 ent1#att11" db:database="db1" db:table="geocach">
+  <Entity gr:x="410" gr:y="390" id="ent1" name="Geocach" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att10 ent1#att11" db:database="db1" db:table="geocach">
     <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="name" type="string" db:column="name"/>
     <Attribute id="ent1#att3" name="description" type="text" db:column="description"/>
@@ -83,13 +83,36 @@
       <db:JoinColumn attribute="ent1#att1" name="geocach_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public"/>
-  <Entity gr:x="495" gr:y="370" id="ent3" name="Dificultad" duration="persistent" attributeOrder="ent3#att9 ent3#att13" db:database="db1" db:table="dificultad">
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public">
+  </db:Database>
+  <Entity gr:x="690" gr:y="305" id="ent3" name="Dificultad" duration="persistent" attributeOrder="ent3#att9 ent3#att13" db:database="db1" db:table="dificultad">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att13" name="nombre" type="string" db:column="nombre"/>
   </Entity>
-  <Entity id="ent4" name="Size" duration="persistent" attributeOrder="ent4#att15 ent4#att16" gr:x="495" gr:y="455" db:database="db1" db:table="size">
+  <Entity id="ent4" name="Size" duration="persistent" attributeOrder="ent4#att15 ent4#att16" gr:x="695" gr:y="390" db:database="db1" db:table="size">
     <Attribute id="ent4#att15" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent4#att16" name="nombre" type="string" db:column="nombre"/>
   </Entity>
+  <Entity gr:x="80" gr:y="445" id="ent2" name="Founded_Geocach" duration="persistent" attributeOrder="ent2#att8 ent2#att17 ent2#att18 ent2#att19" db:database="db1" db:table="founded_geocach">
+    <Attribute id="ent2#att8" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent2#att17" name="user" type="integer" derivationQuery="simpleImported::Self.rel4#role8.userOID"/>
+    <Attribute id="ent2#att18" name="geocach" type="integer" derivationQuery="simpleImported::Self.rel5#role10.ent1#att1"/>
+    <Attribute id="ent2#att19" name="date" type="time" db:column="date"/>
+  </Entity>
+  <Relationship id="rel4" name="User_Founded_Geocach" sourceEntity="User" targetEntity="ent2" db:database="db1" db:table="founded_geocach">
+    <RelationshipRole1 id="rel4#role7" name="UserToFounded_Geocach" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="Founded_GeocachToUser" maxCard="1">
+      <db:JoinColumn attribute="ent2#att8" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel5" name="Geocach_Founded_Geocach" sourceEntity="ent1" targetEntity="ent2" db:database="db1" db:table="founded_geocach">
+    <RelationshipRole1 id="rel5#role9" name="GeocachToFounded_Geocach" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="geocach_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="Founded_GeocachToGeocach" maxCard="1">
+      <db:JoinColumn attribute="ent2#att8" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>

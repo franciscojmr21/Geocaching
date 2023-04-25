@@ -1,0 +1,101 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page7" name="Inicio" gr:x="305" gr:y="35">
+  <ContentUnits>
+    <EntryUnit id="sv2#page7#enu4" name="Create User" linkOrder="sv2#page7#enu4#ln11" gr:x="0" gr:y="160" entity="User">
+      <Field id="sv2#page7#enu4#fld10" name="Nombre Usuario" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv2#page7#enu4#fld11" name="Contrase&#241;a" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv2#page7#enu4#fld12" name="Correo" type="string" modifiable="true" attribute="email"/>
+      <SelectionField id="sv2#page7#enu4#sfld4" name="Rol" type="string"/>
+      <Link id="sv2#page7#enu4#ln10" name="Flow5" to="sv2#cru3" type="transport" validate="true">
+        <LinkParameter id="sv2#page7#enu4#ln10#par28" name="email_email" source="sv2#page7#enu4#fld12" target="sv2#cru3.email"/>
+        <LinkParameter id="sv2#page7#enu4#ln10#par29" name="password_password" source="sv2#page7#enu4#fld11" target="sv2#cru3.password"/>
+        <LinkParameter id="sv2#page7#enu4#ln10#par30" name="userName_userName" source="sv2#page7#enu4#fld10" target="sv2#cru3.userName"/>
+        <LinkParameter id="sv2#page7#enu4#ln10#par31" name="rol_Group.oid(defaultGroup)" source="sv2#page7#enu4#sfld4" target="sv2#cru3.User2DefaultGroup.groupOID"/>
+      </Link>
+      <Link id="sv2#page7#enu4#ln11" name="Create User" to="sv2#tmu4" type="normal" automaticCoupling="true" validate="true"/>
+    </EntryUnit>
+    <MultiMessageUnit id="sv2#page7#mssu4" name="Message2" gr:x="135" gr:y="190"/>
+    <SelectorUnit id="sv2#page7#seu7" name="Rol Selector" gr:x="5" gr:y="0" entity="Group">
+      <Link id="sv2#page7#seu7#ln12" name="OKFlow4" to="sv2#page7#enu4" type="transport">
+        <LinkParameter id="sv2#page7#seu7#ln12#par32" name="groupName_rol [output]" source="groupOIDArray" target="sv2#page7#enu4#sfld4_output"/>
+        <LinkParameter id="sv2#page7#seu7#ln12#par39" name="groupName_rol [label]" source="groupNameArray" target="sv2#page7#enu4#sfld4_label"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit id="sv2#page7#pwu3" name="Users" linkOrder="sv2#page7#pwu3#ln15" gr:x="185" gr:y="75" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName email">
+      <Link id="sv2#page7#pwu3#ln15" name="Ver Geocachers encontrados" to="sv2#seu6" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page7#enu4">
+          <layout:Field field="sv2#page7#enu4#fld10"/>
+          <layout:Field field="sv2#page7#enu4#fld11"/>
+          <layout:Field field="sv2#page7#enu4#fld12"/>
+          <layout:Field field="sv2#page7#enu4#sfld4"/>
+          <layout:Link link="sv2#page7#enu4#ln11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page7#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page7#pwu3">
+          <layout:Link link="sv2#page7#pwu3#ln15"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

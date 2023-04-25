@@ -27,6 +27,5 @@
         <LinkParameter id="sv3#sfu3#ln13#par35" name="si_Marker Title" sourceValue="si" target="sv3#page4#gmu1.markerTitle"/>
       </Link>
     </StringsFunctionUnit>
-    <StringsFunctionUnit gr:x="455" gr:y="475" id="sv3#sfu4" name="Strings Function Unit4" mode="concatStrings" substringType="byIndex" substringMode="afterSeparator" encryptAlgorithm="com.webratio.rtx.core.DES3UnicodeCryptImplementation"/>
   </OperationUnits>
 </SiteView>
