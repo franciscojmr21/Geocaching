@@ -9,6 +9,8 @@
         <LinkParameter id="sv3#page3#enu3#ln3#par11" name="dificulty_dificulty" source="sv3#page3#enu3#sfld1" target="sv3#cru2.ent1#att10"/>
         <LinkParameter id="sv3#page3#enu3#ln3#par12" name="name_name" source="sv3#page3#enu3#fld6" target="sv3#cru2.ent1#att2"/>
         <LinkParameter id="sv3#page3#enu3#ln3#par13" name="size_size" source="sv3#page3#enu3#sfld3" target="sv3#cru2.ent1#att11"/>
+        <LinkParameter id="sv3#page3#enu3#ln3#par20" name="latitude_latitude" source="sv3#page3#enu3#fld8" target="sv3#cru2.ent1#att4"/>
+        <LinkParameter id="sv3#page3#enu3#ln3#par22" name="longitude_longitude" source="sv3#page3#enu3#fld9" target="sv3#cru2.ent1#att5"/>
       </Link>
       <Link id="sv3#page3#enu3#ln4" name="Create Geocach" to="sv3#tmu1" automaticCoupling="true" type="normal" validate="true"/>
       <SelectionField id="sv3#page3#enu3#sfld1" attribute="ent1#att10" type="string" name="Dificultad" splitOutput="false"/>

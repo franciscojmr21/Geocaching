@@ -56,7 +56,7 @@
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="410" gr:y="390" id="ent1" name="Geocach" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att10 ent1#att11" db:database="db1" db:table="geocach">
+  <Entity gr:x="410" gr:y="390" id="ent1" name="Geocach" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att10 ent1#att11 ent1#att20" db:database="db1" db:table="geocach">
     <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="name" type="string" db:column="name"/>
     <Attribute id="ent1#att3" name="description" type="text" db:column="description"/>
@@ -66,6 +66,7 @@
     <Attribute id="ent1#att7" name="last_modify" type="date" db:column="last_modify"/>
     <Attribute id="ent1#att10" name="dificulty" type="string" db:column="dificulty"/>
     <Attribute id="ent1#att11" name="size" type="string" db:column="size"/>
+    <Attribute id="ent1#att20" name="owner" type="integer" derivationQuery="simpleImported::Self.rel2#role4.userOID"/>
   </Entity>
   <Relationship id="rel2" name="Create_Geocach" sourceEntity="User" targetEntity="ent1" gr:bendpoints="89,85,-36,-160" db:database="db1" db:table="geocach">
     <RelationshipRole1 id="rel2#role3" name="UserToGeocach" maxCard="N">
@@ -73,14 +74,6 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel2#role4" name="GeocachToUser" maxCard="1">
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel3" name="Find_Geocach" sourceEntity="User" targetEntity="ent1" gr:bendpoints="36,104,-89,-141" db:database="db1" db:table="find_geocach">
-    <RelationshipRole1 id="rel3#role5" name="UserToGeocach_2" maxCard="N">
-      <db:JoinColumn attribute="userOID" name="user_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel3#role6" name="GeocachToUser_2" maxCard="N">
-      <db:JoinColumn attribute="ent1#att1" name="geocach_oid"/>
     </RelationshipRole2>
   </Relationship>
   <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public">

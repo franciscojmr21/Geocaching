@@ -13,19 +13,8 @@
       </OKLink>
     </TimeUnit>
     <LogoutUnit gr:x="900" gr:y="25" id="sv3#lou2" name="Logout" siteView="sv1" landmark="true"/>
-    <StringsFunctionUnit gr:x="840" gr:y="325" id="sv3#sfu2" name="latitud &amp; longitud" mode="concatStrings" substringType="byIndex" substringMode="afterSeparator" encryptAlgorithm="com.webratio.rtx.core.DES3UnicodeCryptImplementation">
-      <String id="sv3#sfu2#str3" name="latitud"/>
-      <String id="sv3#sfu2#str4" name="longitud"/>
-      <OKLink id="sv3#sfu2#oln10" name="OKFlow10" to="sv3#sfu3">
-        <LinkParameter id="sv3#sfu2#oln10#par33" name="Result String_location" source="resultString" target="sv3#sfu3#str5"/>
-      </OKLink>
-    </StringsFunctionUnit>
-    <StringsFunctionUnit gr:x="810" gr:y="170" id="sv3#sfu3" name="aLocations" mode="stringsToArray" substringType="byIndex" substringMode="afterSeparator" encryptAlgorithm="com.webratio.rtx.core.DES3UnicodeCryptImplementation">
-      <String id="sv3#sfu3#str5" name="location"/>
-      <Link id="sv3#sfu3#ln13" name="Flow13" to="sv3#page4#gmu1" type="transport" validate="true">
-        <LinkParameter id="sv3#sfu3#ln13#par34" name="Result Array_Marker Coordinates" source="resultArray" target="sv3#page4#gmu1.markerCoords"/>
-        <LinkParameter id="sv3#sfu3#ln13#par35" name="si_Marker Title" sourceValue="si" target="sv3#page4#gmu1.markerTitle"/>
-      </Link>
-    </StringsFunctionUnit>
+    <GetUnit gr:x="120" gr:y="485" id="sv3#gtu2" name="Get2" contextParameters="UserCtxParam">
+      <Link id="sv3#gtu2#ln15" name="Flow15" to="sv3#cru2" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
   </OperationUnits>
 </SiteView>

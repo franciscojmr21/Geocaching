@@ -1,18 +1,15 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="545" gr:y="5" id="sv3#page4" name="Home" landmark="false" layout:cellLayout="AdminLTE/Accordion">
   <ContentUnits>
-    <GoogleMapUnit id="sv3#page4#gmu1" name="GoogleMapUnit4" gr:x="5" gr:y="100" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapZoomLevel="3" mapWidth="400" mapHeight="400" mapCoordinates="39.479568, -6.343878"/>
+    <GoogleMapUnit id="sv3#page4#gmu1" name="Mapa de Geocaches" gr:x="5" gr:y="100" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="400" mapHeight="400" mapCoordinates="39.479568, -6.343878">
+      <Marker id="sv3#page4#gmu1#mrk2" name="Marker2"/>
+    </GoogleMapUnit>
     <SelectorUnit gr:x="10" gr:y="215" id="sv3#page4#seu5" name="GeoSelect" entity="ent1" distinctAttributes="ent1#att4 ent1#att5">
-      <Link id="sv3#page4#seu5#ln14" name="Flow14" to="sv3#sfu2" type="transport" validate="true">
-        <LinkParameter id="sv3#page4#seu5#ln14#par36" name="latitude_latitud" source="ent1#att4Array" target="sv3#sfu2#str3"/>
-        <LinkParameter id="sv3#page4#seu5#ln14#par37" name="longitude_longitud" source="ent1#att5Array" target="sv3#sfu2#str4"/>
-        <LinkParameter id="sv3#page4#seu5#ln14#par38" name=",_Separator" sourceValue="," target="sv3#sfu2.separator"/>
+      <Link id="sv3#page4#seu5#ln16" name="Flow16" to="sv3#page4#gmu1" type="transport" validate="true" gr:bendpoints="190,-109,160,121">
+        <LinkParameter id="sv3#page4#seu5#ln16#par34" name="39.469859, -6.380897_Marker Coordinates" sourceValue="39.469859, -6.380897" target="sv3#page4#gmu1.markerCoords"/>
+        <LinkParameter id="sv3#page4#seu5#ln16#par35" name="Hola_Marker Title" sourceValue="Hola" target="sv3#page4#gmu1.markerTitle"/>
       </Link>
     </SelectorUnit>
-    <GoogleGeocodingUnit gr:x="0" gr:y="0" id="sv3#page4#ggu1" name="GoogleGeocodingUnit1" city="C&#225;ceres">
-      <Link id="sv3#page4#ggu1#ln6" name="Flow6" to="sv3#page4#gmu1" type="transport" validate="true">
-        <LinkParameter id="sv3#page4#ggu1#ln6#par21" name="Map Coordinates_Map Coordinates" source="coords" target="sv3#page4#gmu1.coords"/>
-      </Link>
-    </GoogleGeocodingUnit>
+    <GoogleGeocodingUnit gr:x="0" gr:y="0" id="sv3#page4#ggu1" name="GoogleGeocodingUnit1" city="C&#225;ceres" stateOrProvince="C&#225;ceres" country="Espa&#241;a"/>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>

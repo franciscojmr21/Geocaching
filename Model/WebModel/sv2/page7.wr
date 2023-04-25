@@ -20,8 +20,10 @@
         <LinkParameter id="sv2#page7#seu7#ln12#par39" name="groupName_rol [label]" source="groupNameArray" target="sv2#page7#enu4#sfld4_label"/>
       </Link>
     </SelectorUnit>
-    <PowerIndexUnit id="sv2#page7#pwu3" name="Users" linkOrder="sv2#page7#pwu3#ln15" gr:x="185" gr:y="75" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName email">
-      <Link id="sv2#page7#pwu3#ln15" name="Ver Geocachers encontrados" to="sv2#seu6" type="normal" automaticCoupling="true" validate="true"/>
+    <PowerIndexUnit id="sv2#page7#pwu3" name="Users" gr:x="185" gr:y="75" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName email" linkOrder="sv2#page7#pwu3#ln2">
+      <Link id="sv2#page7#pwu3#ln2" name="Ver lista de geocaches" to="sv2#seu4" type="normal" validate="true">
+        <LinkParameter id="sv2#page7#pwu3#ln2#par5" name="oid_AttCondition1" source="data[].userOID" target="sv2#seu4#su1#acond1"/>
+      </Link>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -80,9 +82,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page7#pwu3">
-          <layout:Link link="sv2#page7#pwu3#ln15"/>
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="email"/>
+          <layout:Link link="sv2#page7#pwu3#ln2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
