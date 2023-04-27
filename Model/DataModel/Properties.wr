@@ -56,12 +56,11 @@
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="410" gr:y="390" id="ent1" name="Geocach" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att10 ent1#att11 ent1#att20" db:database="db1" db:table="geocach">
+  <Entity gr:x="410" gr:y="390" id="ent1" name="Geocach" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att6 ent1#att7 ent1#att10 ent1#att11 ent1#att20" db:database="db1" db:table="geocach">
     <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="name" type="string" db:column="name"/>
     <Attribute id="ent1#att3" name="description" type="text" db:column="description"/>
-    <Attribute id="ent1#att4" name="latitude" type="float" db:column="latitude"/>
-    <Attribute id="ent1#att5" name="longitude" type="float" db:column="longitude"/>
+    <Attribute id="ent1#att4" name="coordenadas" type="string" db:column="coordenadas"/>
     <Attribute id="ent1#att6" name="creation_date" type="timestamp" db:column="creation_date"/>
     <Attribute id="ent1#att7" name="last_modify" type="date" db:column="last_modify"/>
     <Attribute id="ent1#att10" name="dificulty" type="string" db:column="dificulty"/>

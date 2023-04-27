@@ -1,7 +1,7 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="UserHome" protected="true" landmarks="sv3#lou2 sv3#page3" homePage="sv3#page4">
   <OperationUnits>
     <CreateUnit gr:x="95" gr:y="335" id="sv3#cru2" name="Create Geocach" entity="ent1">
-      <OKLink id="sv3#cru2#oln3" name="OKFlow3" to="sv3#page3" automaticCoupling="true"/>
+      <OKLink id="sv3#cru2#oln3" name="OKFlow3" to="sv3#page4" automaticCoupling="true"/>
       <KOLink id="sv3#cru2#kln3" name="KOFlow3" to="sv3#page3#mssu3">
         <LinkParameter id="sv3#cru2#kln3#par14" name="Error_Shown Messages" sourceValue="Error" target="sv3#page3#mssu3.shownMessages"/>
       </KOLink>
@@ -12,7 +12,7 @@
         <LinkParameter id="sv3#tmu1#oln2#par9" name="Current/Input Date_last_modify" source="currentDate" target="sv3#cru2.ent1#att7"/>
       </OKLink>
     </TimeUnit>
-    <LogoutUnit gr:x="900" gr:y="25" id="sv3#lou2" name="Logout" siteView="sv1" landmark="true"/>
+    <LogoutUnit gr:x="955" gr:y="15" id="sv3#lou2" name="Logout" siteView="sv1" landmark="true"/>
     <GetUnit gr:x="120" gr:y="485" id="sv3#gtu2" name="Get2" contextParameters="UserCtxParam">
       <Link id="sv3#gtu2#ln15" name="Flow15" to="sv3#cru2" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>

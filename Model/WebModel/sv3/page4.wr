@@ -1,17 +1,59 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="545" gr:y="5" id="sv3#page4" name="Home" landmark="false" layout:cellLayout="AdminLTE/Accordion">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="540" gr:y="95" id="sv3#page4" name="Home" landmark="false" layout:cellLayout="AdminLTE/Accordion">
   <ContentUnits>
-    <GoogleMapUnit id="sv3#page4#gmu1" name="Mapa de Geocaches" gr:x="5" gr:y="100" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="400" mapHeight="400" mapCoordinates="39.479568, -6.343878">
+    <GoogleMapUnit id="sv3#page4#gmu1" name="Mapa de Geocaches" gr:x="220" gr:y="0" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="500" mapHeight="500">
       <Marker id="sv3#page4#gmu1#mrk2" name="Marker2"/>
     </GoogleMapUnit>
-    <SelectorUnit gr:x="10" gr:y="215" id="sv3#page4#seu5" name="GeoSelect" entity="ent1" distinctAttributes="ent1#att4 ent1#att5">
-      <Link id="sv3#page4#seu5#ln16" name="Flow16" to="sv3#page4#gmu1" type="transport" validate="true" gr:bendpoints="190,-109,160,121">
-        <LinkParameter id="sv3#page4#seu5#ln16#par34" name="39.469859, -6.380897_Marker Coordinates" sourceValue="39.469859, -6.380897" target="sv3#page4#gmu1.markerCoords"/>
-        <LinkParameter id="sv3#page4#seu5#ln16#par35" name="Hola_Marker Title" sourceValue="Hola" target="sv3#page4#gmu1.markerTitle"/>
+    <SelectorUnit gr:x="145" gr:y="90" id="sv3#page4#seu5" name="GeoSelect" entity="ent1" distinctAttributes="ent1#att4">
+      <Link id="sv3#page4#seu5#ln16" name="Flow16" to="sv3#page4#gmu1" type="transport" validate="true" gr:bendpoints="119,-32,14,73">
+        <LinkParameter id="sv3#page4#seu5#ln16#par34" name="39.469859, -6.380897_Marker Coordinates" target="sv3#page4#gmu1.markerCoords" source="ent1#att4Array"/>
+        <LinkParameter id="sv3#page4#seu5#ln16#par35" name="Hola_Marker Title" target="sv3#page4#gmu1.markerTitle" source="ent1#att2Array"/>
+        <LinkParameter id="sv3#page4#seu5#ln16#par4" name="prueba_Marker Info" target="sv3#page4#gmu1.markerInfo" source="ent1#att3Array"/>
       </Link>
     </SelectorUnit>
-    <GoogleGeocodingUnit gr:x="0" gr:y="0" id="sv3#page4#ggu1" name="GoogleGeocodingUnit1" city="C&#225;ceres" stateOrProvince="C&#225;ceres" country="Espa&#241;a"/>
+    <EntryUnit gr:x="0" gr:y="5" id="sv3#page4#enu2" name="Ubicaci&#243;n" linkOrder="sv3#page4#enu2#ln20">
+      <Field id="sv3#page4#enu2#fld5" name="Ubicaci&#243;n" type="string" modifiable="true"/>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv3#page4#enu2#fnevr1" name="Form Not Empty1"/>
+      </VRules>
+      <Link id="sv3#page4#enu2#ln20" name="Localizar" to="sv3#page4#gmu1" type="normal" validate="true">
+        <LinkParameter id="sv3#page4#enu2#ln20#par49" name="Ubicaci&#243;n_Map Coordinates" source="sv3#page4#enu2#fld5" target="sv3#page4#gmu1.coords"/>
+      </Link>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page4#enu2">
+          <layout:Field field="sv3#page4#enu2#fld5"/>
+          <layout:Link link="sv3#page4#enu2#ln20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12" rowspan="4">
         <layout:Unit unitId="sv3#page4#gmu1"/>
@@ -58,6 +100,20 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
