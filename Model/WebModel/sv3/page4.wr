@@ -1,24 +1,26 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="540" gr:y="95" id="sv3#page4" name="Home" landmark="false" layout:cellLayout="AdminLTE/Accordion">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="535" gr:y="95" id="sv3#page4" name="Home" landmark="false" layout:cellLayout="AdminLTE/Accordion">
   <ContentUnits>
-    <GoogleMapUnit id="sv3#page4#gmu1" name="Mapa de Geocaches" gr:x="220" gr:y="0" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="500" mapHeight="500">
+    <GoogleMapUnit id="sv3#page4#gmu1" name="Mapa de Geocaches" gr:x="225" gr:y="0" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="500" mapHeight="500" mapZoomLevel="13">
       <Marker id="sv3#page4#gmu1#mrk2" name="Marker2"/>
     </GoogleMapUnit>
-    <SelectorUnit gr:x="145" gr:y="90" id="sv3#page4#seu5" name="GeoSelect" entity="ent1" distinctAttributes="ent1#att4">
-      <Link id="sv3#page4#seu5#ln16" name="Flow16" to="sv3#page4#gmu1" type="transport" validate="true" gr:bendpoints="119,-32,14,73">
-        <LinkParameter id="sv3#page4#seu5#ln16#par34" name="39.469859, -6.380897_Marker Coordinates" target="sv3#page4#gmu1.markerCoords" source="ent1#att4Array"/>
-        <LinkParameter id="sv3#page4#seu5#ln16#par35" name="Hola_Marker Title" target="sv3#page4#gmu1.markerTitle" source="ent1#att2Array"/>
-        <LinkParameter id="sv3#page4#seu5#ln16#par4" name="prueba_Marker Info" target="sv3#page4#gmu1.markerInfo" source="ent1#att3Array"/>
-      </Link>
-    </SelectorUnit>
-    <EntryUnit gr:x="0" gr:y="5" id="sv3#page4#enu2" name="Ubicaci&#243;n" linkOrder="sv3#page4#enu2#ln20">
-      <Field id="sv3#page4#enu2#fld5" name="Ubicaci&#243;n" type="string" modifiable="true"/>
+    <EntryUnit gr:x="5" gr:y="5" id="sv3#page4#enu2" name="Ubicaci&#243;n" linkOrder="sv3#page4#enu2#ln20">
       <VRules>
         <FormNotEmptyValidationRule id="sv3#page4#enu2#fnevr1" name="Form Not Empty1"/>
       </VRules>
-      <Link id="sv3#page4#enu2#ln20" name="Localizar" to="sv3#page4#gmu1" type="normal" validate="true">
-        <LinkParameter id="sv3#page4#enu2#ln20#par49" name="Ubicaci&#243;n_Map Coordinates" source="sv3#page4#enu2#fld5" target="sv3#page4#gmu1.coords"/>
+      <Link id="sv3#page4#enu2#ln20" name="Localizar" to="sv3#seu13" type="normal" validate="true">
+        <LinkParameter id="sv3#page4#enu2#ln20#par62" name="Provincia_KeyCondition10 [oid]" source="sv3#page4#enu2#sfld5" target="sv3#seu13#su14#kcond10.ent6#att22"/>
+      </Link>
+      <SelectionField id="sv3#page4#enu2#sfld5" name="Provincia" type="string"/>
+      <Link id="sv3#page4#enu2#ln30" name="Flow18" to="sv3#seu14" type="transport" validate="true">
+        <LinkParameter id="sv3#page4#enu2#ln30#par67" name="Provincia_AttCondition3" source="sv3#page4#enu2#sfld5" target="sv3#seu14#su15#acond5"/>
       </Link>
     </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="105" id="sv3#page4#seu8" name="Select Provincia" entity="ent6">
+      <Link id="sv3#page4#seu8#ln7" name="Flow7" to="sv3#page4#enu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page4#seu8#ln7#par23" name="nombre_Provincia [label]" source="ent6#att23Array" target="sv3#page4#enu2#sfld5_label"/>
+        <LinkParameter id="sv3#page4#seu8#ln7#par24" name="oid_Provincia [output]" source="ent6#att22Array" target="sv3#page4#enu2#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
@@ -38,8 +40,8 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page4#enu2">
-          <layout:Field field="sv3#page4#enu2#fld5"/>
           <layout:Link link="sv3#page4#enu2#ln20"/>
+          <layout:Field field="sv3#page4#enu2#sfld5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

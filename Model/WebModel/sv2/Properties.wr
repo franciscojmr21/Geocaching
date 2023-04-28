@@ -1,11 +1,5 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Private" protected="true" landmarks="sv2#lou3" homePage="sv2#page7">
   <OperationUnits>
-    <SelectorUnit id="sv2#seu4" name="Founded_Geocachers" gr:x="660" gr:y="160" entity="ent2" distinctAttributes="ent2#att17">
-      <Selector id="sv2#seu4#su1" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv2#seu4#su1#acond1" name="AttCondition1" predicate="eq" booleanOperator="and" implied="false" attributes="ent2#att17" ignoreCase="false"/>
-      </Selector>
-      <OKLink id="sv2#seu4#oln1" name="OKFlow1" to="sv2#seu1"/>
-    </SelectorUnit>
     <TimeUnit id="sv2#tmu4" name="Time2" gr:x="100" gr:y="325">
       <OKLink id="sv2#tmu4#oln6" name="OKFlow5" to="sv2#cru3">
         <LinkParameter id="sv2#tmu4#oln6#par25" name="Current/Input Timestamp_fecha_alta" source="currentTimestamp" target="sv2#cru3.User#att14"/>
@@ -13,16 +7,22 @@
     </TimeUnit>
     <CreateUnit id="sv2#cru3" name="Create1" gr:x="255" gr:y="400" entity="User">
       <KOLink id="sv2#cru3#kln4" name="KOFlow2" to="sv2#page7#mssu4">
-        <LinkParameter id="sv2#cru3#kln4#par27" name="Error_Shown Messages" target="sv2#page7#mssu4.shownMessages" sourceValue="Error"/>
+        <LinkParameter id="sv2#cru3#kln4#par27" name="Error_Shown Messages" target="sv2#page7#mssu4.shownMessages" sourceValue="Error al a&#241;adir a la BD el usuario"/>
       </KOLink>
       <OKLink id="sv2#cru3#oln8" name="OKFlow1" to="sv2#page7" automaticCoupling="true" gr:bendpoints="-37,-99,-117,101"/>
     </CreateUnit>
-    <LogoutUnit id="sv2#lou3" name="Logout" landmark="true" gr:x="115" gr:y="10" siteView="sv1"/>
-    <SelectorUnit gr:x="860" gr:y="320" id="sv2#seu1" name="Geocaches" entity="ent1">
+    <LogoutUnit id="sv2#lou3" name="Logout" landmark="true" gr:x="10" gr:y="30" siteView="sv1"/>
+    <SelectorUnit gr:x="705" gr:y="160" id="sv2#seu1" name="Geocaches" entity="ent1">
       <Selector id="sv2#seu1#su4" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#seu1#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+        <AttributesCondition id="sv2#seu1#su4#acond6" name="AttCondition6" predicate="eq" booleanOperator="and" implied="false" attributes="ent1#att20"/>
       </Selector>
       <OKLink id="sv2#seu1#oln4" name="OKFlow4" to="sv2#page5#inu1" automaticCoupling="true"/>
     </SelectorUnit>
+    <CreateUnit gr:x="-25" gr:y="225" id="sv2#cru1" name="Create Province" entity="ent6">
+      <OKLink id="sv2#cru1#oln5" name="OKFlow5" to="sv2#page7" automaticCoupling="true"/>
+      <KOLink id="sv2#cru1#kln2" name="KOFlow2" to="sv2#page7#mssu4" gr:bendpoints="63,210,-397,190;268,262,-192,242">
+        <LinkParameter id="sv2#cru1#kln2#par17" name="Error al a&#241;adir a la BD la provincia_Shown Messages" sourceValue="Error al a&#241;adir a la BD la provincia" target="sv2#page7#mssu4.shownMessages"/>
+      </KOLink>
+    </CreateUnit>
   </OperationUnits>
 </SiteView>

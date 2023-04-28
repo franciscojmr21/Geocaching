@@ -6,15 +6,31 @@
         <LinkParameter id="sv3#cru2#kln3#par14" name="Error_Shown Messages" sourceValue="Error" target="sv3#page3#mssu3.shownMessages"/>
       </KOLink>
     </CreateUnit>
-    <TimeUnit gr:x="355" gr:y="375" id="sv3#tmu1" name="Time1">
+    <TimeUnit gr:x="185" gr:y="470" id="sv3#tmu1" name="Time1">
       <OKLink id="sv3#tmu1#oln2" name="OKFlow2" to="sv3#cru2">
         <LinkParameter id="sv3#tmu1#oln2#par8" name="Current/Input Date_creation_date" source="currentTimestamp" target="sv3#cru2.ent1#att6"/>
         <LinkParameter id="sv3#tmu1#oln2#par9" name="Current/Input Date_last_modify" source="currentDate" target="sv3#cru2.ent1#att7"/>
       </OKLink>
     </TimeUnit>
     <LogoutUnit gr:x="955" gr:y="15" id="sv3#lou2" name="Logout" siteView="sv1" landmark="true"/>
-    <GetUnit gr:x="120" gr:y="485" id="sv3#gtu2" name="Get2" contextParameters="UserCtxParam">
-      <Link id="sv3#gtu2#ln15" name="Flow15" to="sv3#cru2" automaticCoupling="true" type="transport" validate="true"/>
-    </GetUnit>
+    <SelectorUnit gr:x="570" gr:y="-115" id="sv3#seu13" name="Select provincia" entity="ent6" linkOrder="sv3#seu13#ln31">
+      <Selector id="sv3#seu13#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu13#su14#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu13#oln12" name="OKFlow12" to="sv3#seu14"/>
+      <Link id="sv3#seu13#ln31" name="Flow31" to="sv3#page4#gmu1" type="transport" validate="true">
+        <LinkParameter id="sv3#seu13#ln31#par68" name="coordenadas_Map Coordinates" source="ent6#att29Array" target="sv3#page4#gmu1.coords"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#seu14" name="Select Geocaching" gr:x="785" gr:y="-125" entity="ent1">
+      <Selector id="sv3#seu14#su15" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#seu14#su15#acond5" name="AttCondition3" predicate="eq" booleanOperator="and" implied="false" attributes="ent1#att28"/>
+      </Selector>
+      <OKLink id="sv3#seu14#oln13" name="Flow19" to="sv3#page4#gmu1">
+        <LinkParameter id="sv3#seu14#oln13#par69" name="description_Marker Info" source="ent1#att3Array" target="sv3#page4#gmu1.markerInfo"/>
+        <LinkParameter id="sv3#seu14#oln13#par70" name="coordenadas_Marker Coordinates" source="ent1#att4Array" target="sv3#page4#gmu1.markerCoords"/>
+        <LinkParameter id="sv3#seu14#oln13#par71" name="name_Marker Title" source="ent1#att2Array" target="sv3#page4#gmu1.markerTitle"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>

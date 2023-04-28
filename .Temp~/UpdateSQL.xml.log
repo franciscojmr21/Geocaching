@@ -1,33 +1,26 @@
-[27 abr 2023 18:50:58] DEBUG Executing SQL script
-[27 abr 2023 18:50:58] INFO ================================================================================
-[27 abr 2023 18:50:58] INFO onError= 'stop'
-[27 abr 2023 18:50:58] INFO autoCommit= 'false'
-[27 abr 2023 18:50:58] INFO username= 'postgres'
-[27 abr 2023 18:50:58] INFO outputPath= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.xml'
-[27 abr 2023 18:50:58] INFO outputLogPath= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.xml.log'
-[27 abr 2023 18:50:58] INFO encoding= ''
-[27 abr 2023 18:50:58] INFO driverClass= 'org.postgresql.Driver'
-[27 abr 2023 18:50:58] INFO sqlScript= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.sql'
-[27 abr 2023 18:50:58] INFO eventSocketPort= '49324'
-[27 abr 2023 18:50:58] INFO statementSeparator= ';'
-[27 abr 2023 18:50:58] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[27 abr 2023 18:50:58] INFO password= 'admin'
-[27 abr 2023 18:50:58] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
-[27 abr 2023 18:50:58] INFO ================================================================================
-[27 abr 2023 18:50:58] INFO Connecting to the Database...
-[27 abr 2023 18:50:58] INFO Database connection estabilished
-[27 abr 2023 18:50:58] INFO transaction isolation: 2
-[27 abr 2023 18:50:58] DEBUG ================================================================================
-[27 abr 2023 18:50:58] DEBUG Executing SQL script file: D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.sql
-[27 abr 2023 18:50:58] DEBUG Executing statement:  create table "public"."geocach" ( "oid"  int4  not null, "name"  varchar(255), "description"  text, "coordenadas"  varchar(255), "creation_date"  timestamp, "last_modify"  date, "dificulty"  varchar(255), "size"  varchar(255), primary key ("oid") )
-[27 abr 2023 18:50:58] DEBUG Executing statement:    create table "public"."founded_geocach" ( "oid"  int4  not null, "date"  time, primary key ("oid") )
-[27 abr 2023 18:50:58] DEBUG Executing statement:    alter table "public"."geocach"  add column  "user_oid"  int4
-[27 abr 2023 18:50:58] DEBUG Executing statement:  alter table "public"."geocach"   add constraint fk_geocach_user foreign key ("user_oid") references "public"."user" ("oid")
-[27 abr 2023 18:50:58] DEBUG Executing statement:    alter table "public"."founded_geocach"  add column  "user_oid"  int4
-[27 abr 2023 18:50:58] DEBUG Executing statement:  alter table "public"."founded_geocach"   add constraint fk_founded_geocach_user foreign key ("user_oid") references "public"."user" ("oid")
-[27 abr 2023 18:50:58] DEBUG Executing statement:    alter table "public"."founded_geocach"  add column  "geocach_oid"  int4
-[27 abr 2023 18:50:58] DEBUG Executing statement:  alter table "public"."founded_geocach"   add constraint fk_founded_geocach_geocach foreign key ("geocach_oid") references "public"."geocach" ("oid")
-[27 abr 2023 18:50:58] DEBUG ================================================================================
-[27 abr 2023 18:50:58] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[27 abr 2023 18:50:58] INFO Database connection closed
-[27 abr 2023 18:50:58] DEBUG Total time: 469 milliseconds
+[28 abr 2023 21:41:21] DEBUG Executing SQL script
+[28 abr 2023 21:41:21] INFO ================================================================================
+[28 abr 2023 21:41:21] INFO onError= 'stop'
+[28 abr 2023 21:41:21] INFO autoCommit= 'false'
+[28 abr 2023 21:41:21] INFO username= 'postgres'
+[28 abr 2023 21:41:21] INFO outputPath= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.xml'
+[28 abr 2023 21:41:21] INFO outputLogPath= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.xml.log'
+[28 abr 2023 21:41:21] INFO encoding= ''
+[28 abr 2023 21:41:21] INFO driverClass= 'org.postgresql.Driver'
+[28 abr 2023 21:41:21] INFO sqlScript= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.sql'
+[28 abr 2023 21:41:21] INFO eventSocketPort= '51033'
+[28 abr 2023 21:41:21] INFO statementSeparator= ';'
+[28 abr 2023 21:41:21] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[28 abr 2023 21:41:21] INFO password= 'admin'
+[28 abr 2023 21:41:21] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
+[28 abr 2023 21:41:21] INFO ================================================================================
+[28 abr 2023 21:41:21] INFO Connecting to the Database...
+[28 abr 2023 21:41:21] INFO Database connection estabilished
+[28 abr 2023 21:41:21] INFO transaction isolation: 2
+[28 abr 2023 21:41:21] DEBUG ================================================================================
+[28 abr 2023 21:41:21] DEBUG Executing SQL script file: D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.sql
+[28 abr 2023 21:41:21] DEBUG Executing statement:  alter table "public"."provincia"  add column  "coordenadas"  varchar(255)
+[28 abr 2023 21:41:21] DEBUG ================================================================================
+[28 abr 2023 21:41:21] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[28 abr 2023 21:41:21] INFO Database connection closed
+[28 abr 2023 21:41:21] DEBUG Total time: 270 milliseconds
