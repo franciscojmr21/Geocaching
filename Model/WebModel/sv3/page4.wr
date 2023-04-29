@@ -1,18 +1,19 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="535" gr:y="95" id="sv3#page4" name="Home" landmark="false" layout:cellLayout="AdminLTE/Accordion">
   <ContentUnits>
-    <GoogleMapUnit id="sv3#page4#gmu1" name="Mapa de Geocaches" gr:x="225" gr:y="0" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="500" mapHeight="500" mapZoomLevel="13">
-      <Marker id="sv3#page4#gmu1#mrk2" name="Marker2"/>
-    </GoogleMapUnit>
-    <EntryUnit gr:x="5" gr:y="5" id="sv3#page4#enu2" name="Ubicaci&#243;n" linkOrder="sv3#page4#enu2#ln20">
+    <GoogleMapUnit id="sv3#page4#gmu1" name="Mapa de Geocaches" gr:x="225" gr:y="0" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="500" mapHeight="500" mapZoomLevel="13"/>
+    <EntryUnit gr:x="5" gr:y="5" id="sv3#page4#enu2" name="Ubicaci&#243;n" linkOrder="sv3#page4#enu2#ln20 sv3#page4#enu2#ln22">
       <VRules>
         <FormNotEmptyValidationRule id="sv3#page4#enu2#fnevr1" name="Form Not Empty1"/>
       </VRules>
-      <Link id="sv3#page4#enu2#ln20" name="Localizar" to="sv3#seu13" type="normal" validate="true">
+      <Link id="sv3#page4#enu2#ln20" name="Cargar Mapa" to="sv3#seu13" type="normal" validate="true">
         <LinkParameter id="sv3#page4#enu2#ln20#par62" name="Provincia_KeyCondition10 [oid]" source="sv3#page4#enu2#sfld5" target="sv3#seu13#su14#kcond10.ent6#att22"/>
       </Link>
-      <SelectionField id="sv3#page4#enu2#sfld5" name="Provincia" type="string"/>
+      <SelectionField id="sv3#page4#enu2#sfld5" name="City" type="string"/>
       <Link id="sv3#page4#enu2#ln30" name="Flow18" to="sv3#seu14" type="transport" validate="true">
         <LinkParameter id="sv3#page4#enu2#ln30#par67" name="Provincia_AttCondition3" source="sv3#page4#enu2#sfld5" target="sv3#seu14#su15#acond5"/>
+      </Link>
+      <Link id="sv3#page4#enu2#ln22" name="Cargar Geocaches" to="sv3#page4#pwu4" type="normal" validate="true">
+        <LinkParameter id="sv3#page4#enu2#ln22#par34" name="City_AttCondition2" source="sv3#page4#enu2#sfld5" target="sv3#page4#pwu4#su2#acond2"/>
       </Link>
     </EntryUnit>
     <SelectorUnit gr:x="0" gr:y="105" id="sv3#page4#seu8" name="Select Provincia" entity="ent6">
@@ -21,6 +22,11 @@
         <LinkParameter id="sv3#page4#seu8#ln7#par24" name="oid_Provincia [output]" source="ent6#att22Array" target="sv3#page4#enu2#sfld5_output"/>
       </Link>
     </SelectorUnit>
+    <PowerIndexUnit gr:x="210" gr:y="90" id="sv3#page4#pwu4" name="Geocaches List" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att7 ent1#att10 ent1#att11">
+      <Selector id="sv3#page4#pwu4#su2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page4#pwu4#su2#acond2" name="AttCondition2" predicate="eq" booleanOperator="and" implied="false" attributes="ent1#att28"/>
+      </Selector>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
@@ -40,8 +46,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page4#enu2">
-          <layout:Link link="sv3#page4#enu2#ln20"/>
           <layout:Field field="sv3#page4#enu2#sfld5"/>
+          <layout:Link link="sv3#page4#enu2#ln20"/>
+          <layout:Link link="sv3#page4#enu2#ln22"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -57,7 +64,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12" rowspan="4">
+      <layout:Cell colspan="7" rowspan="4">
         <layout:Unit unitId="sv3#page4#gmu1"/>
       </layout:Cell>
       <layout:Cell/>
@@ -66,7 +73,14 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="5" rowspan="4">
+        <layout:Unit unitId="sv3#page4#pwu4">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Attribute attribute="ent1#att10"/>
+          <layout:Attribute attribute="ent1#att11"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

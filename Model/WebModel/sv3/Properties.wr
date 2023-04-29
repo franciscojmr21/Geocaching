@@ -12,7 +12,7 @@
         <LinkParameter id="sv3#tmu1#oln2#par9" name="Current/Input Date_last_modify" source="currentDate" target="sv3#cru2.ent1#att7"/>
       </OKLink>
     </TimeUnit>
-    <LogoutUnit gr:x="955" gr:y="15" id="sv3#lou2" name="Logout" siteView="sv1" landmark="true"/>
+    <LogoutUnit gr:x="1040" gr:y="-125" id="sv3#lou2" name="Logout" siteView="sv1" landmark="true"/>
     <SelectorUnit gr:x="570" gr:y="-115" id="sv3#seu13" name="Select provincia" entity="ent6" linkOrder="sv3#seu13#ln31">
       <Selector id="sv3#seu13#su14" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#seu13#su14#kcond10" name="KeyCondition10" predicate="in" implied="false"/>

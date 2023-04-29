@@ -59,7 +59,7 @@
     <Attribute id="ent1#att10" name="dificulty" type="integer" derivationQuery="simpleImported::Self.rel3#role6.ent3#att9"/>
     <Attribute id="ent1#att11" name="size" type="integer" derivationQuery="simpleImported::Self.rel6#role12.ent4#att15"/>
     <Attribute id="ent1#att20" name="owner" type="integer" derivationQuery="simpleImported::Self.rel2#role4.userOID"/>
-    <Attribute id="ent1#att28" name="province" type="integer" derivationQuery="simpleImported::Self.rel7#role14.ent6#att22"/>
+    <Attribute id="ent1#att28" name="city" type="integer" derivationQuery="simpleImported::Self.rel7#role14.ent6#att22"/>
   </Entity>
   <Relationship id="rel2" name="Create_Geocach" sourceEntity="User" targetEntity="ent1" gr:bendpoints="89,85,-36,-160" db:database="db1" db:table="geocach">
     <RelationshipRole1 id="rel2#role3" name="UserToGeocach" maxCard="N">
@@ -69,8 +69,7 @@
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public"/>
   <Entity gr:x="760" gr:y="260" id="ent3" name="Dificultad" duration="persistent" attributeOrder="ent3#att9 ent3#att13 ent3#att24" db:database="db1" db:table="dificultad">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att13" name="nombre" type="string" db:column="nombre"/>
@@ -106,7 +105,7 @@
       <db:JoinColumn attribute="ent2#att8" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="775" gr:y="475" id="ent6" name="Provincia" duration="persistent" attributeOrder="ent6#att22 ent6#att23 ent6#att29" db:database="db1" db:table="provincia">
+  <Entity gr:x="775" gr:y="475" id="ent6" name="City" duration="persistent" attributeOrder="ent6#att22 ent6#att23 ent6#att29" db:database="db1" db:table="provincia">
     <Attribute id="ent6#att22" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent6#att23" name="nombre" type="string" db:column="nombre"/>
     <Attribute id="ent6#att29" name="coordenadas" type="string" db:column="coordenadas"/>

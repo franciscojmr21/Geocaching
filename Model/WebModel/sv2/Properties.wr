@@ -18,7 +18,7 @@
       </Selector>
       <OKLink id="sv2#seu1#oln4" name="OKFlow4" to="sv2#page5#inu1" automaticCoupling="true"/>
     </SelectorUnit>
-    <CreateUnit gr:x="-25" gr:y="225" id="sv2#cru1" name="Create Province" entity="ent6">
+    <CreateUnit gr:x="-25" gr:y="225" id="sv2#cru1" name="Create City" entity="ent6">
       <OKLink id="sv2#cru1#oln5" name="OKFlow5" to="sv2#page7" automaticCoupling="true"/>
       <KOLink id="sv2#cru1#kln2" name="KOFlow2" to="sv2#page7#mssu4" gr:bendpoints="63,210,-397,190;268,262,-192,242">
         <LinkParameter id="sv2#cru1#kln2#par17" name="Error al a&#241;adir a la BD la provincia_Shown Messages" sourceValue="Error al a&#241;adir a la BD la provincia" target="sv2#page7#mssu4.shownMessages"/>

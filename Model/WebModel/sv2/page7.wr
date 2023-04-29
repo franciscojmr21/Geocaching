@@ -26,7 +26,7 @@
         <LinkParameter id="sv2#page7#pwu3#ln34#par84" name="oid_AttCondition6" source="scroller.current" target="sv2#seu1#su4#acond6"/>
       </Link>
     </PowerIndexUnit>
-    <EntryUnit gr:x="0" gr:y="160" id="sv2#page7#enu5" name="Create Province" linkOrder="sv2#page7#enu5#ln5">
+    <EntryUnit gr:x="0" gr:y="160" id="sv2#page7#enu5" name="Add City" linkOrder="sv2#page7#enu5#ln5">
       <Link id="sv2#page7#enu5#ln5" name="A&#241;adir" to="sv2#cru1" type="normal" validate="true">
         <LinkParameter id="sv2#page7#enu5#ln5#par7" name="Nombre_nombre" source="sv2#page7#enu5#fld3" target="sv2#cru1.ent6#att23"/>
         <LinkParameter id="sv2#page7#enu5#ln5#par61" name="Coordenadas_coordenadas" source="sv2#page7#enu5#fld4" target="sv2#cru1.ent6#att29"/>
@@ -34,7 +34,7 @@
       <Field id="sv2#page7#enu5#fld3" name="Nombre" type="string" modifiable="true"/>
       <Field id="sv2#page7#enu5#fld4" name="Coordenadas" type="string" modifiable="true"/>
     </EntryUnit>
-    <PowerIndexUnit gr:x="0" gr:y="15" id="sv2#page7#pwu2" name="Provinces" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att23"/>
+    <PowerIndexUnit gr:x="0" gr:y="15" id="sv2#page7#pwu2" name="Cities" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att23"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -54,45 +54,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page7#enu5">
-          <layout:Link link="sv2#page7#enu5#ln5"/>
-          <layout:Field field="sv2#page7#enu5#fld3"/>
-          <layout:Field field="sv2#page7#enu5#fld4"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page7#pwu2">
-          <layout:Attribute attribute="ent6#att23"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page7#enu4">
           <layout:Field field="sv2#page7#enu4#fld10"/>
           <layout:Field field="sv2#page7#enu4#fld11"/>
@@ -106,6 +68,50 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page7#enu5">
+          <layout:Link link="sv2#page7#enu5#ln5"/>
+          <layout:Field field="sv2#page7#enu5#fld3"/>
+          <layout:Field field="sv2#page7#enu5#fld4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page7#pwu3">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Link link="sv2#page7#pwu3#ln34"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page7#pwu2">
+          <layout:Attribute attribute="ent6#att23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -114,13 +120,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page7#pwu3">
-          <layout:Attribute attribute="userName"/>
-          <layout:Attribute attribute="email"/>
-          <layout:Link link="sv2#page7#pwu3#ln34"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
