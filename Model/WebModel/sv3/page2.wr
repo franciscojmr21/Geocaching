@@ -1,23 +1,63 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="360" gr:y="430" id="sv3#page2" name="Search Friends" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="370" gr:y="550" id="sv3#page2" name="Search Friends" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="10" id="sv3#page2#enu7" name="Search Geocacher" linkOrder="sv3#page2#enu7#ln3">
+    <EntryUnit gr:x="0" gr:y="15" id="sv3#page2#enu7" name="Search Geocacher" linkOrder="sv3#page2#enu7#ln3">
       <Field id="sv3#page2#enu7#fld9" name="Name" type="string" modifiable="true"/>
       <Link id="sv3#page2#enu7#ln3" name="Search" to="sv3#seu9" type="normal" validate="true">
         <LinkParameter id="sv3#page2#enu7#ln3#par11" name="Name_AttCondition3" source="sv3#page2#enu7#fld9" target="sv3#seu9#su6#acond3"/>
       </Link>
     </EntryUnit>
-    <IndexUnit gr:x="155" gr:y="0" id="sv3#page2#inu3" name="Geocachers" entity="User" displayAttributes="userName email User#att14 User#att27">
+    <IndexUnit gr:x="345" gr:y="5" id="sv3#page2#inu3" name="Geocachers" entity="User" displayAttributes="userName User#att27" linkOrder="sv3#page2#inu3#ln2">
       <Selector id="sv3#page2#inu3#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page2#inu3#su7#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv3#page2#inu3#ln2" name="Follow User" to="sv3#seu5" automaticCoupling="true" type="normal" validate="true"/>
+      <SortAttribute attribute="User#att27" order="descending"/>
+      <SortAttribute attribute="userName" order="ascending"/>
     </IndexUnit>
+    <PowerIndexUnit gr:x="165" gr:y="0" id="sv3#page2#pwu5" name="Friends" sortable="true" checkable="false" useCountQuery="false" entity="User" linkOrder="sv3#page2#pwu5#ln17" displayAttributes="userName User#att14 User#att27">
+      <Selector id="sv3#page2#pwu5#su10" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page2#pwu5#su10#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel8#role15"/>
+      </Selector>
+      <Link id="sv3#page2#pwu5#ln17" name="Unfollow" to="sv3#seu10" automaticCoupling="true" type="normal" validate="true"/>
+      <SortAttribute attribute="User#att27" order="descending"/>
+      <SortAttribute attribute="userName" order="ascending"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv3#page2#enu7">
           <layout:Field field="sv3#page2#enu7#fld9"/>
           <layout:Link link="sv3#page2#enu7#ln3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6" rowspan="2">
+        <layout:Unit unitId="sv3#page2#pwu5">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="User#att14"/>
+          <layout:Attribute attribute="User#att27"/>
+          <layout:Link link="sv3#page2#pwu5#ln17"/>
+          <layout:Link link="sv3#page2#pwu5User#att27"/>
+          <layout:Link link="sv3#page2#pwu5userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page2#inu3">
+          <layout:Link link="sv3#page2#inu3#ln2"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="User#att27"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -33,14 +73,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page2#inu3">
-          <layout:Attribute attribute="userName"/>
-          <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att14"/>
-          <layout:Attribute attribute="User#att27"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
