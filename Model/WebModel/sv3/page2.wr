@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="360" gr:y="430" id="sv3#page2" name="Search Friends" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="10" id="sv3#page2#enu7" name="Search Geocacher" linkOrder="sv3#page2#enu7#ln3">
+      <Field id="sv3#page2#enu7#fld9" name="Name" type="string" modifiable="true"/>
+      <Link id="sv3#page2#enu7#ln3" name="Search" to="sv3#seu9" type="normal" validate="true">
+        <LinkParameter id="sv3#page2#enu7#ln3#par11" name="Name_AttCondition3" source="sv3#page2#enu7#fld9" target="sv3#seu9#su6#acond3"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit gr:x="155" gr:y="0" id="sv3#page2#inu3" name="Geocachers" entity="User" displayAttributes="userName email User#att14 User#att27">
+      <Selector id="sv3#page2#inu3#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page2#inu3#su7#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page2#enu7">
+          <layout:Field field="sv3#page2#enu7#fld9"/>
+          <layout:Link link="sv3#page2#enu7#ln3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page2#inu3">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att14"/>
+          <layout:Attribute attribute="User#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

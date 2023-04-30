@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="UserHome" protected="true" landmarks="sv3#lou2 sv3#page3" homePage="sv3#page4">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="UserHome" protected="true" landmarks="sv3#lou2 sv3#page3 sv3#page2" homePage="sv3#page4">
   <OperationUnits>
     <CreateUnit gr:x="95" gr:y="335" id="sv3#cru2" name="Create Geocach" entity="ent1">
       <OKLink id="sv3#cru2#oln3" name="OKFlow3" to="sv3#page4" automaticCoupling="true"/>
@@ -30,6 +30,14 @@
         <LinkParameter id="sv3#seu14#oln13#par69" name="description_Marker Info" source="ent1#att3Array" target="sv3#page4#gmu1.markerInfo"/>
         <LinkParameter id="sv3#seu14#oln13#par70" name="coordenadas_Marker Coordinates" source="ent1#att4Array" target="sv3#page4#gmu1.markerCoords"/>
         <LinkParameter id="sv3#seu14#oln13#par71" name="name_Marker Title" source="ent1#att2Array" target="sv3#page4#gmu1.markerTitle"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit gr:x="405" gr:y="635" id="sv3#seu9" name="Selector9" entity="User">
+      <Selector id="sv3#seu9#su6" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#seu9#su6#acond3" name="AttCondition3" predicate="contains" booleanOperator="or" implied="false" attributes="userName" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="sv3#seu9#oln9" name="OKFlow9" to="sv3#page2#inu3">
+        <LinkParameter id="sv3#seu9#oln9#par12" name="oid_KeyCondition3 [oid]" source="userOIDArray" target="sv3#page2#inu3#su7#kcond3.userOID"/>
       </OKLink>
     </SelectorUnit>
   </OperationUnits>

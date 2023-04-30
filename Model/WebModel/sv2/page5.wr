@@ -1,6 +1,10 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page5" name="Geocachers creados" gr:x="935" gr:y="160">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv2#page5#inu1" name="Simple List1" entity="ent1" displayAttributes="ent1#att2 ent1#att6 ent1#att10 ent1#att11 ent1#att3 ent1#att4 ent1#att7 ent1#att28"/>
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#page5#inu1" name="Geocaches" entity="ent1" displayAttributes="ent1#att2 ent1#att6 ent1#att10 ent1#att11 ent1#att3 ent1#att4 ent1#att7 ent1#att28">
+      <Selector id="sv2#page5#inu1#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page5#inu1#su8#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

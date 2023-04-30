@@ -12,7 +12,7 @@
       <OKLink id="sv2#cru3#oln8" name="OKFlow1" to="sv2#page7" automaticCoupling="true" gr:bendpoints="-37,-99,-117,101"/>
     </CreateUnit>
     <LogoutUnit id="sv2#lou3" name="Logout" landmark="true" gr:x="10" gr:y="30" siteView="sv1"/>
-    <SelectorUnit gr:x="705" gr:y="160" id="sv2#seu1" name="Geocaches" entity="ent1">
+    <SelectorUnit gr:x="795" gr:y="160" id="sv2#seu1" name="Geocaches" entity="ent1">
       <Selector id="sv2#seu1#su4" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#seu1#su4#acond6" name="AttCondition6" predicate="eq" booleanOperator="and" implied="false" attributes="ent1#att20"/>
       </Selector>
@@ -24,5 +24,13 @@
         <LinkParameter id="sv2#cru1#kln2#par17" name="Error al a&#241;adir a la BD la provincia_Shown Messages" sourceValue="Error al a&#241;adir a la BD la provincia" target="sv2#page7#mssu4.shownMessages"/>
       </KOLink>
     </CreateUnit>
+    <SelectorUnit gr:x="620" gr:y="155" id="sv2#seu4" name="Selector User" entity="User">
+      <Selector id="sv2#seu4#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#seu4#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#seu4#oln1" name="OKFlow1" to="sv2#seu1">
+        <LinkParameter id="sv2#seu4#oln1#par4" name="oid_AttCondition6" source="userOIDArray" target="sv2#seu1#su4#acond6"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>

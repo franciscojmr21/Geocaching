@@ -22,9 +22,7 @@
       </Link>
     </SelectorUnit>
     <PowerIndexUnit id="sv2#page7#pwu3" name="Users" gr:x="325" gr:y="75" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName email" linkOrder="sv2#page7#pwu3#ln34">
-      <Link id="sv2#page7#pwu3#ln34" name="Geocaches creados" to="sv2#seu1" type="normal" validate="true">
-        <LinkParameter id="sv2#page7#pwu3#ln34#par84" name="oid_AttCondition6" source="scroller.current" target="sv2#seu1#su4#acond6"/>
-      </Link>
+      <Link id="sv2#page7#pwu3#ln34" name="Geocaches creados" to="sv2#seu4" type="normal" validate="true" automaticCoupling="true"/>
     </PowerIndexUnit>
     <EntryUnit gr:x="0" gr:y="160" id="sv2#page7#enu5" name="Add City" linkOrder="sv2#page7#enu5#ln5">
       <Link id="sv2#page7#enu5#ln5" name="A&#241;adir" to="sv2#cru1" type="normal" validate="true">
