@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle>
+  <Entry key="City">Ciudad</Entry>
+  <Entry key="Create Geocach">Crear Geocach</Entry>
+  <Entry key="Follow User">Seguir Usuario</Entry>
+  <Entry key="Friends">Amigos</Entry>
+  <Entry key="Geocachers Creados">Geocaches Creados</Entry>
+  <Entry key="Geocachers Encontrados">Geocaches Encontrados</Entry>
+  <Entry key="Geocaches List">Lista de Geocaches</Entry>
+  <Entry key="Home">Inicio</Entry>
+  <Entry key="Logout">Cerrar sesi&#243;n</Entry>
+  <Entry key="Name">Nombre</Entry>
+  <Entry key="New Geocach">Nuevo Geocach</Entry>
+  <Entry key="Search">Buscar</Entry>
+  <Entry key="Search Friends">Buscar Usuarios</Entry>
+  <Entry key="Search Geocacher">Buscar Geocach</Entry>
+  <Entry key="Unfollow">Dejar de Seguir</Entry>
+  <Entry key="User Profile">Perfil de usuario</Entry>
+  <Entry key="UserHome">Inicio</Entry>
+</Bundle>

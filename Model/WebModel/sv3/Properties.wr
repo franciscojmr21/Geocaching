@@ -49,7 +49,7 @@
         <LinkParameter id="sv3#seu5#oln7#par35" name="oid_KeyCondition6 [oid] [User] [Target]" source="userOIDArray" target="sv3#cnu1#su9#kcond6.userOID"/>
       </OKLink>
     </SelectorUnit>
-    <GetUnit gr:x="645" gr:y="770" id="sv3#gtu2" name="Get2" contextParameters="UserCtxParam" linkOrder="sv3#gtu2#ln14 sv3#gtu2#ln16 sv3#gtu2#ln26">
+    <GetUnit gr:x="645" gr:y="770" id="sv3#gtu2" name="Get2" contextParameters="UserCtxParam" linkOrder="sv3#gtu2#ln14 sv3#gtu2#ln16">
       <Link id="sv3#gtu2#ln13" name="Flow13" to="sv3#seu9" type="transport" validate="true">
         <LinkParameter id="sv3#gtu2#ln13#par38" name="UserCtxParam.oid_me [oid (not in)]" source="sv3#gtu2.UserCtxParam" target="sv3#seu9#su6#kcond12.userOID"/>
       </Link>
@@ -59,7 +59,6 @@
       <Link id="sv3#gtu2#ln16" name="Flow16" to="sv3#dcnu1" type="transport" validate="true" gr:bendpoints="71,77,-9,457;324,77,244,457;390,-306,310,74">
         <LinkParameter id="sv3#gtu2#ln16#par26" name="UserCtxParam.oid_KeyCondition7 [oid] [User] [Source]" source="sv3#gtu2.UserCtxParam" target="sv3#dcnu1#su11#kcond7.userOID"/>
       </Link>
-      <Link id="sv3#gtu2#ln26" name="Flow26" to="sv3#cru4" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
     <ConnectUnit gr:x="860" gr:y="735" id="sv3#cnu1" name="Connect1" relationship="rel8#role15">
       <SourceSelector id="sv3#cnu1#su5" defaultPolicy="fill" booleanOperator="and">
@@ -85,34 +84,6 @@
       </Selector>
       <OKLink id="sv3#seu10#oln14" name="OKFlow14" to="sv3#dcnu1">
         <LinkParameter id="sv3#seu10#oln14#par36" name="oid_KeyCondition8 [oid] [User] [Target]" source="userOIDArray" target="sv3#dcnu1#su12#kcond8.userOID"/>
-      </OKLink>
-    </SelectorUnit>
-    <CreateUnit id="sv3#cru4" name="Add founded" gr:x="1300" gr:y="410" entity="ent2">
-      <OKLink id="sv3#cru4#oln18" name="OKFlow16" to="sv3#page9#pwu9" automaticCoupling="true"/>
-    </CreateUnit>
-    <SelectorUnit id="sv3#seu16" name="Select Geocach" gr:x="1120" gr:y="145" entity="ent1">
-      <Selector id="sv3#seu16#su21" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#seu16#su21#kcond15" name="KeyCondition11" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="sv3#seu16#oln19" name="OKFlow11" to="sv3#page9#dau1" automaticCoupling="true"/>
-    </SelectorUnit>
-    <SelectorUnit id="sv3#seu17" name="selector user" gr:x="1500" gr:y="-65" entity="User">
-      <Selector id="sv3#seu17#su22" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#seu17#su22#kcond16" name="KeyCondition14" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="sv3#seu17#oln20" name="OKFlow18" to="sv3#page9#pwu9" automaticCoupling="true"/>
-    </SelectorUnit>
-    <TimeUnit id="sv3#tmu2" name="Time2" gr:x="1175" gr:y="295">
-      <OKLink id="sv3#tmu2#oln21" name="Flow23" to="sv3#cru4">
-        <LinkParameter id="sv3#tmu2#oln21#par5" name="Current/Input Date_date" source="currentTimestamp" target="sv3#cru4.ent2#att19"/>
-      </OKLink>
-    </TimeUnit>
-    <SelectorUnit id="sv3#seu18" name="Selector founded" gr:x="1295" gr:y="-70" entity="ent2">
-      <Selector id="sv3#seu18#su29" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#seu18#su29#acond9" name="geocach oid" predicate="eq" booleanOperator="and" implied="false" attributes="ent2#att18"/>
-      </Selector>
-      <OKLink id="sv3#seu18#oln22" name="OKFlow17" to="sv3#seu17">
-        <LinkParameter id="sv3#seu18#oln22#par37" name="user_KeyCondition14 [oid]" source="ent2#att17Array" target="sv3#seu17#su22#kcond16.userOID"/>
       </OKLink>
     </SelectorUnit>
   </OperationUnits>

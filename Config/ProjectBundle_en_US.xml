@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle>
+  <Entry key="Amigos">Friends</Entry>
+  <Entry key="Cargar Geocaches">Load Geocaches</Entry>
+  <Entry key="Cargar Mapa">Load Map</Entry>
+  <Entry key="City">City</Entry>
+  <Entry key="Coordenadas">coordinates</Entry>
+  <Entry key="Create Geocach">Create Geocach</Entry>
+  <Entry key="Descripci&#243;n">Description</Entry>
+  <Entry key="Dificultad">difficulty</Entry>
+  <Entry key="Error">Error</Entry>
+  <Entry key="Follow User">Follow User</Entry>
+  <Entry key="Friends">Friends</Entry>
+  <Entry key="Geocachers">Geocachers</Entry>
+  <Entry key="Geocachers Creados">Created Geocaches</Entry>
+  <Entry key="Geocachers Encontrados">Founded Geocaches</Entry>
+  <Entry key="Mapa de Geocaches">Geocaches Map</Entry>
+  <Entry key="Nombre">Name</Entry>
+  <Entry key="Perfil Usuario">User Profile</Entry>
+  <Entry key="Provincia">Province</Entry>
+  <Entry key="Tama&#241;o">Size</Entry>
+  <Entry key="Ubicaci&#243;n">Location</Entry>
+</Bundle>

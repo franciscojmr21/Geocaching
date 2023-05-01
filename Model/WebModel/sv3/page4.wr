@@ -22,11 +22,10 @@
         <LinkParameter id="sv3#page4#seu8#ln7#par24" name="oid_Provincia [output]" source="ent6#att22Array" target="sv3#page4#enu2#sfld5_output"/>
       </Link>
     </SelectorUnit>
-    <PowerIndexUnit gr:x="210" gr:y="90" id="sv3#page4#pwu4" name="Geocaches List" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att7 ent1#att10 ent1#att11" linkOrder="sv3#page4#pwu4#ln23">
+    <PowerIndexUnit gr:x="210" gr:y="90" id="sv3#page4#pwu4" name="Geocaches List" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att7 ent1#att10 ent1#att11">
       <Selector id="sv3#page4#pwu4#su2" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#page4#pwu4#su2#acond2" name="AttCondition2" predicate="eq" booleanOperator="and" implied="false" attributes="ent1#att28"/>
       </Selector>
-      <Link id="sv3#page4#pwu4#ln23" name="SHow Info" to="sv3#seu16" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid>
@@ -80,7 +79,6 @@
           <layout:Attribute attribute="ent1#att7"/>
           <layout:Attribute attribute="ent1#att10"/>
           <layout:Attribute attribute="ent1#att11"/>
-          <layout:Link link="sv3#page4#pwu4#ln23"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
