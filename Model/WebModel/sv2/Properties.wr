@@ -32,5 +32,27 @@
         <LinkParameter id="sv2#seu4#oln1#par4" name="oid_AttCondition6" source="userOIDArray" target="sv2#seu1#su4#acond6"/>
       </OKLink>
     </SelectorUnit>
+    <SelectorUnit id="sv2#seu11" name="Select Geocacher" gr:x="1040" gr:y="510" entity="ent1">
+      <Selector id="sv2#seu11#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#seu11#su17#kcond11" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#seu11#oln11" name="OKFlow18" to="sv2#page8#inu2" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="sv2#seu12" name="Select User" gr:x="690" gr:y="325" entity="User">
+      <Selector id="sv2#seu12#su18" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#seu12#su18#kcond13" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#seu12#oln16" name="OKFlow2" to="sv2#seu15">
+        <LinkParameter id="sv2#seu12#oln16#par10" name="oid_AttCondition1" source="userOIDArray" target="sv2#seu15#su19#acond1"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="sv2#seu15" name="Founded_Geocachers" gr:x="835" gr:y="430" entity="ent2">
+      <Selector id="sv2#seu15#su19" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#seu15#su19#acond1" name="AttCondition1" predicate="eq" booleanOperator="and" implied="false" attributes="ent2#att17"/>
+      </Selector>
+      <OKLink id="sv2#seu15#oln17" name="OKFlow17" to="sv2#seu11">
+        <LinkParameter id="sv2#seu15#oln17#par13" name="geocach_KeyCondition14 [oid]" source="ent2#att18Array" target="sv2#seu11#su17#kcond11.ent1#att1"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>
