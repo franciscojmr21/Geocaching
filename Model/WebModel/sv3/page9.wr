@@ -1,0 +1,61 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page9" name="Geocach" gr:x="1310" gr:y="110">
+  <ContentUnits>
+    <DataUnit id="sv3#page9#dau1" name="Geocach" linkOrder="sv3#page9#dau1#ln18 sv3#page9#dau1#ln19" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4">
+      <Selector id="sv3#page9#dau1#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page9#dau1#su23#kcond18" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page9#dau1#ln18" name="Founded" to="sv3#tmu2" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page9#dau1#ln19" name="Mostrar hist&#243;rico" to="sv3#seu18" type="normal" validate="true">
+        <LinkParameter id="sv3#page9#dau1#ln19#par20" name="oid_geocach oid" source="data.ent1#att1" target="sv3#seu18#su29#acond9"/>
+      </Link>
+      <Link id="sv3#page9#dau1#ln21" name="Flow26" to="sv3#cru4" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <PowerIndexUnit id="sv3#page9#pwu9" name="Hist&#243;rico" gr:x="135" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName">
+      <Selector id="sv3#page9#pwu9#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page9#pwu9#su25#kcond19" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page9#dau1">
+          <layout:Link link="sv3#page9#dau1#ln18"/>
+          <layout:Link link="sv3#page9#dau1#ln19"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page9#pwu9">
+          <layout:Attribute attribute="userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
