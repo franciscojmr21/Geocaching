@@ -1,0 +1,124 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1175" gr:y="-20" id="sv3#page6" name="User Profile" landmark="true">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page6#dau3" name="Perfil Usuario" entity="User" displayAttributes="userName email User#att12 User#att14 User#att27 User#att5">
+      <Selector id="sv3#page6#dau3#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page6#dau3#su24#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit gr:x="365" gr:y="10" id="sv3#page6#gtu4" name="Get4" contextParameters="UserCtxParam">
+      <Link id="sv3#page6#gtu4#ln25" name="Flow25" to="sv3#page6#dau3" type="transport" validate="true">
+        <LinkParameter id="sv3#page6#gtu4#ln25#par43" name="UserCtxParam.oid_KeyCondition17 [oid]" source="sv3#page6#gtu4.UserCtxParam" target="sv3#page6#dau3#su24#kcond17.userOID"/>
+      </Link>
+      <Link id="sv3#page6#gtu4#ln27" name="Flow27" to="sv3#page6#pwu6" type="transport" validate="true">
+        <LinkParameter id="sv3#page6#gtu4#ln27#par49" name="UserCtxParam.oid_RoleCondition5 [oid]" source="sv3#page6#gtu4.UserCtxParam" target="sv3#page6#pwu6#su26#rcond5.userOID"/>
+      </Link>
+      <Link id="sv3#page6#gtu4#ln28" name="Flow28" to="sv3#page6#pwu7" type="transport" validate="true">
+        <LinkParameter id="sv3#page6#gtu4#ln28#par47" name="UserCtxParam.oid_AttCondition7" source="sv3#page6#gtu4.UserCtxParam" target="sv3#page6#pwu7#su27#acond7"/>
+      </Link>
+      <Link id="sv3#page6#gtu4#ln29" name="Flow29" to="sv3#page6#pwu8" type="transport" validate="true">
+        <LinkParameter id="sv3#page6#gtu4#ln29#par48" name="UserCtxParam.oid_finder" source="sv3#page6#gtu4.UserCtxParam" target="sv3#page6#pwu8#su28#acond8"/>
+      </Link>
+    </GetUnit>
+    <PowerIndexUnit gr:x="0" gr:y="155" id="sv3#page6#pwu6" name="Amigos" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName">
+      <Selector id="sv3#page6#pwu6#su26" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page6#pwu6#su26#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel8#role15"/>
+      </Selector>
+    </PowerIndexUnit>
+    <PowerIndexUnit gr:x="65" gr:y="305" id="sv3#page6#pwu7" name="Geocachers Creados" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att6 ent1#att10 ent1#att11 ent1#att28">
+      <Selector id="sv3#page6#pwu7#su27" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page6#pwu7#su27#acond7" name="creator" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att20"/>
+      </Selector>
+    </PowerIndexUnit>
+    <PowerIndexUnit gr:x="315" gr:y="305" id="sv3#page6#pwu8" name="Geocachers Encontrados" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att18 ent2#att19 ent2#att26">
+      <Selector id="sv3#page6#pwu8#su28" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page6#pwu8#su28#acond8" name="finder" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att17"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page6#dau3">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att12"/>
+          <layout:Attribute attribute="User#att14"/>
+          <layout:Attribute attribute="User#att27"/>
+          <layout:Attribute attribute="User#att5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page6#pwu6">
+          <layout:Attribute attribute="userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page6#pwu7">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att10"/>
+          <layout:Attribute attribute="ent1#att11"/>
+          <layout:Attribute attribute="ent1#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page6#pwu8">
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att19"/>
+          <layout:Attribute attribute="ent2#att26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,26 +1,26 @@
-[28 abr 2023 21:41:21] DEBUG Executing SQL script
-[28 abr 2023 21:41:21] INFO ================================================================================
-[28 abr 2023 21:41:21] INFO onError= 'stop'
-[28 abr 2023 21:41:21] INFO autoCommit= 'false'
-[28 abr 2023 21:41:21] INFO username= 'postgres'
-[28 abr 2023 21:41:21] INFO outputPath= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.xml'
-[28 abr 2023 21:41:21] INFO outputLogPath= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.xml.log'
-[28 abr 2023 21:41:21] INFO encoding= ''
-[28 abr 2023 21:41:21] INFO driverClass= 'org.postgresql.Driver'
-[28 abr 2023 21:41:21] INFO sqlScript= 'D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.sql'
-[28 abr 2023 21:41:21] INFO eventSocketPort= '51033'
-[28 abr 2023 21:41:21] INFO statementSeparator= ';'
-[28 abr 2023 21:41:21] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[28 abr 2023 21:41:21] INFO password= 'admin'
-[28 abr 2023 21:41:21] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
-[28 abr 2023 21:41:21] INFO ================================================================================
-[28 abr 2023 21:41:21] INFO Connecting to the Database...
-[28 abr 2023 21:41:21] INFO Database connection estabilished
-[28 abr 2023 21:41:21] INFO transaction isolation: 2
-[28 abr 2023 21:41:21] DEBUG ================================================================================
-[28 abr 2023 21:41:21] DEBUG Executing SQL script file: D:\Users\fjavi\Desktop\workspace\Geocachin\.Temp~\UpdateSQL.sql
-[28 abr 2023 21:41:21] DEBUG Executing statement:  alter table "public"."provincia"  add column  "coordenadas"  varchar(255)
-[28 abr 2023 21:41:21] DEBUG ================================================================================
-[28 abr 2023 21:41:21] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[28 abr 2023 21:41:21] INFO Database connection closed
-[28 abr 2023 21:41:21] DEBUG Total time: 270 milliseconds
+[01 may 2023 17:31:08] DEBUG Executing SQL script
+[01 may 2023 17:31:08] INFO ================================================================================
+[01 may 2023 17:31:08] INFO onError= 'stop'
+[01 may 2023 17:31:08] INFO autoCommit= 'false'
+[01 may 2023 17:31:08] INFO username= 'postgres'
+[01 may 2023 17:31:08] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml'
+[01 may 2023 17:31:08] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.xml.log'
+[01 may 2023 17:31:08] INFO encoding= ''
+[01 may 2023 17:31:08] INFO driverClass= 'org.postgresql.Driver'
+[01 may 2023 17:31:08] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql'
+[01 may 2023 17:31:08] INFO eventSocketPort= '58531'
+[01 may 2023 17:31:08] INFO statementSeparator= ';'
+[01 may 2023 17:31:08] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[01 may 2023 17:31:08] INFO password= 'admin'
+[01 may 2023 17:31:08] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
+[01 may 2023 17:31:08] INFO ================================================================================
+[01 may 2023 17:31:08] INFO Connecting to the Database...
+[01 may 2023 17:31:09] INFO Database connection estabilished
+[01 may 2023 17:31:09] INFO transaction isolation: 2
+[01 may 2023 17:31:09] DEBUG ================================================================================
+[01 may 2023 17:31:09] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~\UpdateSQL.sql
+[01 may 2023 17:31:09] DEBUG Executing statement:  create view "public"."user_amigos_view" as select AL1."oid" as "oid", count(distinct AL2."user_oid_2") as "der_attr" from  "public"."user" AL1 left outer join "public"."user_user" AL2 on AL1."oid"=AL2."user_oid" group by AL1."oid"
+[01 may 2023 17:31:09] DEBUG ================================================================================
+[01 may 2023 17:31:09] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[01 may 2023 17:31:09] INFO Database connection closed
+[01 may 2023 17:31:09] DEBUG Total time: 240 milliseconds

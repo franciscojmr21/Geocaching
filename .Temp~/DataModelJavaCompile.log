@@ -1,0 +1,41 @@
+Buildfile: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.generator.webapp_7.2.18.201903231300\DataModel\JavaCompile.xml
+
+main:
+    [javac] Compiling 9 source files to C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching\WEB-INF\classes
+    [javac] ----------
+    [javac] 1. ERROR in C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching\WEB-INF\classes\com\webratio\webapp\User.java (at line 23)
+    [javac] 	private com.webratio.webapp.User_AmigosBean _amigosBean;
+    [javac] 	        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    [javac] com.webratio.webapp.User_AmigosBean cannot be resolved to a type
+    [javac] ----------
+    [javac] 2. ERROR in C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching\WEB-INF\classes\com\webratio\webapp\User.java (at line 111)
+    [javac] 	com.webratio.webapp.User_AmigosBean __amigos = this.getAmigosBean();
+    [javac] 	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    [javac] com.webratio.webapp.User_AmigosBean cannot be resolved to a type
+    [javac] ----------
+    [javac] 3. ERROR in C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching\WEB-INF\classes\com\webratio\webapp\User.java (at line 111)
+    [javac] 	com.webratio.webapp.User_AmigosBean __amigos = this.getAmigosBean();
+    [javac] 	                                                    ^^^^^^^^^^^^^
+    [javac] The method getAmigosBean() from the type User refers to the missing type User_AmigosBean
+    [javac] ----------
+    [javac] 4. ERROR in C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching\WEB-INF\classes\com\webratio\webapp\User.java (at line 122)
+    [javac] 	public com.webratio.webapp.User_AmigosBean getAmigosBean() {
+    [javac] 	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    [javac] com.webratio.webapp.User_AmigosBean cannot be resolved to a type
+    [javac] ----------
+    [javac] 5. ERROR in C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching\WEB-INF\classes\com\webratio\webapp\User.java (at line 123)
+    [javac] 	return _amigosBean;
+    [javac] 	       ^^^^^^^^^^^
+    [javac] User_AmigosBean cannot be resolved to a type
+    [javac] ----------
+    [javac] 6. ERROR in C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching\WEB-INF\classes\com\webratio\webapp\User.java (at line 126)
+    [javac] 	public void setAmigosBean(com.webratio.webapp.User_AmigosBean _amigosBean) {
+    [javac] 	                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    [javac] com.webratio.webapp.User_AmigosBean cannot be resolved to a type
+    [javac] ----------
+    [javac] 7. ERROR in C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching\WEB-INF\classes\com\webratio\webapp\User.java (at line 127)
+    [javac] 	this._amigosBean = _amigosBean;
+    [javac] 	^^^^^^^^^^^^^^^^
+    [javac] User_AmigosBean cannot be resolved to a type
+    [javac] ----------
+    [javac] 7 problems (7 errors)
