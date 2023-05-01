@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1175" gr:y="-20" id="sv3#page6" name="User Profile" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="440" gr:y="955" id="sv3#page6" name="User Profile" landmark="true">
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv3#page6#dau3" name="Perfil Usuario" entity="User" displayAttributes="userName email User#att12 User#att14 User#att27 User#att5">
       <Selector id="sv3#page6#dau3#su24" defaultPolicy="fill" booleanOperator="and">
@@ -24,10 +24,16 @@
         <RelationshipRoleCondition id="sv3#page6#pwu6#su26#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel8#role15"/>
       </Selector>
     </PowerIndexUnit>
-    <PowerIndexUnit gr:x="65" gr:y="305" id="sv3#page6#pwu7" name="Geocachers Creados" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att6 ent1#att10 ent1#att11 ent1#att28">
+    <PowerIndexUnit gr:x="65" gr:y="305" id="sv3#page6#pwu7" name="Geocachers Creados" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att6 ent1#att10 ent1#att11 ent1#att28" linkOrder="sv3#page6#pwu7#ln38">
       <Selector id="sv3#page6#pwu7#su27" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#page6#pwu7#su27#acond7" name="creator" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att20"/>
       </Selector>
+      <Link id="sv3#page6#pwu7#ln38" name="Editar" to="sv3#page10#enu6" type="normal" validate="true">
+        <LinkParameter id="sv3#page6#pwu7#ln38#par58" name="city_city - Preselection" source="data[].ent1#att28" target="sv3#page10#enu6#sfld7_presel"/>
+        <LinkParameter id="sv3#page6#pwu7#ln38#par59" name="dificulty_dificulty - Preselection" source="data[].ent1#att10" target="sv3#page10#enu6#sfld6_presel"/>
+        <LinkParameter id="sv3#page6#pwu7#ln38#par60" name="oid_Key Condition [oid]" source="data[].ent1#att1" target="sv3#page10#enu6.ent1#att1"/>
+        <LinkParameter id="sv3#page6#pwu7#ln38#par63" name="size_size - Preselection" source="data[].ent1#att11" target="sv3#page10#enu6#sfld8_presel"/>
+      </Link>
     </PowerIndexUnit>
     <PowerIndexUnit gr:x="315" gr:y="305" id="sv3#page6#pwu8" name="Geocachers Encontrados" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att18 ent2#att19 ent2#att26">
       <Selector id="sv3#page6#pwu8#su28" defaultPolicy="fill" booleanOperator="and">
@@ -86,6 +92,7 @@
           <layout:Attribute attribute="ent1#att10"/>
           <layout:Attribute attribute="ent1#att11"/>
           <layout:Attribute attribute="ent1#att28"/>
+          <layout:Link link="sv3#page6#pwu7#ln38"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

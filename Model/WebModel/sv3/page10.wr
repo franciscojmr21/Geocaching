@@ -1,0 +1,83 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page10" name="Edit Geocach" gr:x="610" gr:y="1470">
+  <ContentUnits>
+    <EntryUnit id="sv3#page10#enu6" name="Editar Geocach" linkOrder="sv3#page10#enu6#ln26" gr:x="110" gr:y="0" entity="ent1" fieldOrder="sv3#page10#enu6#fld14 sv3#page10#enu6#fld5 sv3#page10#enu6#fld13 sv3#page10#enu6#sfld6 sv3#page10#enu6#sfld8 sv3#page10#enu6#sfld7">
+      <Field id="sv3#page10#enu6#fld5" name="description" type="text" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv3#page10#enu6#fld13" name="coordenadas" type="string" modifiable="true" attribute="ent1#att4"/>
+      <SelectionField id="sv3#page10#enu6#sfld6" name="dificulty" type="integer"/>
+      <Field id="sv3#page10#enu6#fld14" name="name" attribute="ent1#att2" type="string" modifiable="true"/>
+      <SelectionField id="sv3#page10#enu6#sfld7" name="city" type="integer"/>
+      <SelectionField id="sv3#page10#enu6#sfld8" name="size" type="integer"/>
+      <Link id="sv3#page10#enu6#ln23" name="Flow44" to="sv3#mfu1" type="transport" validate="true">
+        <LinkParameter id="sv3#page10#enu6#ln23#par40" name="Key [oid]_KeyCondition20 [oid]" source="key.ent1#att1" target="sv3#mfu1#su21#kcond15.ent1#att1"/>
+        <LinkParameter id="sv3#page10#enu6#ln23#par41" name="coordenadas_coordenadas" source="sv3#page10#enu6#fld13" target="sv3#mfu1.ent1#att4"/>
+        <LinkParameter id="sv3#page10#enu6#ln23#par42" name="description_description" source="sv3#page10#enu6#fld5" target="sv3#mfu1.ent1#att3"/>
+        <LinkParameter id="sv3#page10#enu6#ln23#par44" name="name_name" source="sv3#page10#enu6#fld14" target="sv3#mfu1.ent1#att2"/>
+        <LinkParameter id="sv3#page10#enu6#ln23#par45" name="city_City.oid(GeocachToProvincia)" source="sv3#page10#enu6#sfld7" target="sv3#mfu1.rel7#role14.ent6#att22"/>
+        <LinkParameter id="sv3#page10#enu6#ln23#par46" name="dificulty_Dificultad.oid(GeocachToDificultad)" source="sv3#page10#enu6#sfld6" target="sv3#mfu1.rel3#role6.ent3#att9"/>
+        <LinkParameter id="sv3#page10#enu6#ln23#par50" name="size_Size.oid(GeocachToSize)" source="sv3#page10#enu6#sfld8" target="sv3#mfu1.rel6#role12.ent4#att15"/>
+      </Link>
+      <Link id="sv3#page10#enu6#ln26" name="Guardar Cambios" to="sv3#tmu2" type="normal" automaticCoupling="true" validate="true"/>
+    </EntryUnit>
+    <SelectorUnit id="sv3#page10#seu16" name="Size" gr:x="260" gr:y="160" entity="ent4">
+      <Link id="sv3#page10#seu16#ln35" name="Flow41" to="sv3#page10#enu6" type="transport" validate="true">
+        <LinkParameter id="sv3#page10#seu16#ln35#par51" name="oid_size [label]" source="ent4#att15Array" target="sv3#page10#enu6#sfld8_label"/>
+        <LinkParameter id="sv3#page10#seu16#ln35#par52" name="oid_size [output]" source="ent4#att15Array" target="sv3#page10#enu6#sfld8_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#page10#seu17" name="Provincia" gr:x="120" gr:y="155" entity="ent6">
+      <Link id="sv3#page10#seu17#ln36" name="Flow40" to="sv3#page10#enu6" type="transport" validate="true">
+        <LinkParameter id="sv3#page10#seu17#ln36#par53" name="oid_city [label]" source="ent6#att23Array" target="sv3#page10#enu6#sfld7_label"/>
+        <LinkParameter id="sv3#page10#seu17#ln36#par55" name="oid_city [output]" source="ent6#att22Array" target="sv3#page10#enu6#sfld7_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#page10#seu18" name="Dificultad" gr:x="365" gr:y="160" entity="ent3">
+      <Link id="sv3#page10#seu18#ln37" name="Flow43" to="sv3#page10#enu6" type="transport" validate="true">
+        <LinkParameter id="sv3#page10#seu18#ln37#par56" name="oid_dificulty [label]" source="ent3#att9Array" target="sv3#page10#enu6#sfld6_label"/>
+        <LinkParameter id="sv3#page10#seu18#ln37#par57" name="oid_dificulty [output]" source="ent3#att9Array" target="sv3#page10#enu6#sfld6_output"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit id="sv3#page10#mssu2" name="Error" gr:x="0" gr:y="130"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page10#enu6">
+          <layout:Field field="sv3#page10#enu6#fld14"/>
+          <layout:Field field="sv3#page10#enu6#fld5"/>
+          <layout:Field field="sv3#page10#enu6#fld13"/>
+          <layout:Field field="sv3#page10#enu6#sfld6"/>
+          <layout:Field field="sv3#page10#enu6#sfld8"/>
+          <layout:Field field="sv3#page10#enu6#sfld7"/>
+          <layout:Link link="sv3#page10#enu6#ln26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page10#mssu2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
