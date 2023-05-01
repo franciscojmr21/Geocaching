@@ -72,7 +72,8 @@
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public"/>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public">
+  </db:Database>
   <Entity gr:x="760" gr:y="260" id="ent3" name="Dificultad" duration="persistent" attributeOrder="ent3#att9 ent3#att13 ent3#att24" db:database="db1" db:table="dificultad">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att13" name="nombre" type="string" db:column="nombre"/>
@@ -83,14 +84,12 @@
     <Attribute id="ent4#att16" name="nombre" type="string" db:column="nombre"/>
     <Attribute id="ent4#att25" name="puntos" type="integer" db:column="puntos"/>
   </Entity>
-  <Entity gr:x="80" gr:y="445" id="ent2" name="Founded_Geocach" duration="persistent" attributeOrder="ent2#att8 ent2#att17 ent2#att18 ent2#att19 ent2#att26" db:database="db1" db:table="founded_geocach">
+  <Entity gr:x="80" gr:y="445" id="ent2" name="Founded_Geocach" duration="persistent" attributeOrder="ent2#att8 ent2#att17 ent2#att18 ent2#att19 ent2#att21" db:database="db1" db:table="founded_geocach">
     <Attribute id="ent2#att8" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att17" name="user" type="integer" derivationQuery="simpleImported::Self.rel4#role8.userOID"/>
     <Attribute id="ent2#att18" name="geocach" type="integer" derivationQuery="simpleImported::Self.rel5#role10.ent1#att1"/>
     <Attribute id="ent2#att19" name="date" type="time" db:column="date"/>
-    <Attribute id="ent2#att26" name="puntos" type="integer" derivationQuery="calculated::Self.rel5#role10(as Var1).rel3#role6(as Var2).ent3#att24 + Self.rel5#role10(as Var1).rel6#role12(as Var3).ent4#att25" db:table="founded_geocach_puntos_view" db:column="der_attr" storageType="file">
-      <db:JoinColumn attribute="ent2#att8" name="oid"/>
-    </Attribute>
+    <Attribute id="ent2#att21" name="puntos" db:column="puntos" type="integer" key="false"/>
   </Entity>
   <Relationship id="rel4" name="User_Founded_Geocach" sourceEntity="User" targetEntity="ent2" db:database="db1" db:table="founded_geocach">
     <RelationshipRole1 id="rel4#role7" name="UserToFounded_Geocach" maxCard="N">

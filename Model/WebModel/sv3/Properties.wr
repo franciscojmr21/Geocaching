@@ -36,12 +36,13 @@
       <Selector id="sv3#seu9#su6" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#seu9#su6#acond3" name="users" predicate="contains" booleanOperator="or" implied="false" attributes="userName" ignoreCase="true"/>
         <KeyCondition id="sv3#seu9#su6#kcond12" name="me" predicate="notIn" implied="false"/>
+        <AttributesCondition id="sv3#seu9#su6#acond10" name="no admin" predicate="neq" booleanOperator="and" implied="false" attributes="userOID" value="1" ignoreCase="false"/>
       </Selector>
       <OKLink id="sv3#seu9#oln9" name="OKFlow9" to="sv3#page2#inu3">
         <LinkParameter id="sv3#seu9#oln9#par12" name="oid_KeyCondition3 [oid]" source="userOIDArray" target="sv3#page2#inu3#su7#kcond3.userOID"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="885" gr:y="550" id="sv3#seu5" name="Selector5" entity="User">
+    <SelectorUnit gr:x="895" gr:y="640" id="sv3#seu5" name="Selector5" entity="User">
       <Selector id="sv3#seu5#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#seu5#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -49,18 +50,21 @@
         <LinkParameter id="sv3#seu5#oln7#par35" name="oid_KeyCondition6 [oid] [User] [Target]" source="userOIDArray" target="sv3#cnu1#su9#kcond6.userOID"/>
       </OKLink>
     </SelectorUnit>
-    <GetUnit gr:x="645" gr:y="770" id="sv3#gtu2" name="Get2" contextParameters="UserCtxParam" linkOrder="sv3#gtu2#ln14 sv3#gtu2#ln16">
+    <GetUnit gr:x="1000" gr:y="855" id="sv3#gtu2" name="Get2" contextParameters="UserCtxParam" linkOrder="sv3#gtu2#ln14 sv3#gtu2#ln16 sv3#gtu2#ln44 sv3#gtu2#ln45 sv3#gtu2#ln46">
       <Link id="sv3#gtu2#ln13" name="Flow13" to="sv3#seu9" type="transport" validate="true">
         <LinkParameter id="sv3#gtu2#ln13#par38" name="UserCtxParam.oid_me [oid (not in)]" source="sv3#gtu2.UserCtxParam" target="sv3#seu9#su6#kcond12.userOID"/>
       </Link>
       <Link id="sv3#gtu2#ln14" name="Flow14" to="sv3#cnu1" type="transport" validate="true">
         <LinkParameter id="sv3#gtu2#ln14#par33" name="UserCtxParam.oid_KeyCondition5 [oid] [User] [Source]" source="sv3#gtu2.UserCtxParam" target="sv3#cnu1#su5#kcond5.userOID"/>
       </Link>
-      <Link id="sv3#gtu2#ln16" name="Flow16" to="sv3#dcnu1" type="transport" validate="true" gr:bendpoints="71,77,-9,457;324,77,244,457;390,-306,310,74">
+      <Link id="sv3#gtu2#ln16" name="Flow16" to="sv3#dcnu1" type="transport" validate="true" gr:bendpoints="-56,-328,244,137">
         <LinkParameter id="sv3#gtu2#ln16#par26" name="UserCtxParam.oid_KeyCondition7 [oid] [User] [Source]" source="sv3#gtu2.UserCtxParam" target="sv3#dcnu1#su11#kcond7.userOID"/>
       </Link>
+      <Link id="sv3#gtu2#ln44" name="Flow44" to="sv3#seu20" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#gtu2#ln45" name="Flow45" to="sv3#mfu2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#gtu2#ln46" name="Flow46" to="sv3#cru4" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <ConnectUnit gr:x="860" gr:y="735" id="sv3#cnu1" name="Connect1" relationship="rel8#role15">
+    <ConnectUnit gr:x="735" gr:y="750" id="sv3#cnu1" name="Connect1" relationship="rel8#role15">
       <SourceSelector id="sv3#cnu1#su5" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#cnu1#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
       </SourceSelector>
@@ -100,5 +104,76 @@
       </KOLink>
       <OKLink id="sv3#mfu1#oln19" name="OKFlow19" to="sv3#page6" automaticCoupling="true"/>
     </ModifyUnit>
+    <CreateUnit id="sv3#cru4" name="Add founded" gr:x="1760" gr:y="225" entity="ent2">
+      <OKLink id="sv3#cru4#oln20" name="OKFlow16" to="sv3#page9#pwu9" automaticCoupling="true"/>
+      <KOLink id="sv3#cru4#kln6" name="KOFlow7" to="sv3#page9#mssu5">
+        <LinkParameter id="sv3#cru4#kln6#par20" name="add error_Shown Messages" target="sv3#page9#mssu5.shownMessages" sourceValue="add error"/>
+      </KOLink>
+    </CreateUnit>
+    <MathUnit id="sv3#mathu1" name="Sumar Puntos" gr:x="1430" gr:y="355" resultType="integer" defaultExpression="Cantidad_entrada+Cantidad_sumar">
+      <MathVariable id="sv3#mathu1#mathv1" name="Cantidad_entrada"/>
+      <MathVariable id="sv3#mathu1#mathv2" name="Cantidad_sumar"/>
+      <OKLink id="sv3#mathu1#oln21" name="OKFlow29" to="sv3#mfu2">
+        <LinkParameter id="sv3#mathu1#oln21#par64" name="Result_puntos" source="result" target="sv3#mfu2.User#att27"/>
+      </OKLink>
+      <KOLink id="sv3#mathu1#kln7" name="KOFlow5" to="sv3#page9#mssu5">
+        <LinkParameter id="sv3#mathu1#kln7#par65" name="error_Shown Messages" target="sv3#page9#mssu5.shownMessages" sourceValue="sum error"/>
+      </KOLink>
+    </MathUnit>
+    <TimeUnit id="sv3#tmu3" name="Time2" gr:x="1210" gr:y="235">
+      <Link id="sv3#tmu3#ln18" name="Flow40" to="sv3#cru4" type="transport" validate="true">
+        <LinkParameter id="sv3#tmu3#ln18#par66" name="Current/Input Timestamp_date" source="currentTimestamp" target="sv3#cru4.ent2#att19"/>
+      </Link>
+      <OKLink id="sv3#tmu3#oln22" name="OKFlow31" to="sv3#seu23" automaticCoupling="true"/>
+    </TimeUnit>
+    <SelectorUnit id="sv3#seu19" name="Selector founded" gr:x="1365" gr:y="-100" entity="ent2">
+      <Selector id="sv3#seu19#su22" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#seu19#su22#acond9" name="geocach oid" predicate="eq" booleanOperator="and" implied="false" attributes="ent2#att18"/>
+      </Selector>
+      <OKLink id="sv3#seu19#oln23" name="OKFlow17" to="sv3#seu21">
+        <LinkParameter id="sv3#seu19#oln23#par72" name="user_KeyCondition14 [oid]" source="ent2#att17Array" target="sv3#seu21#su29#kcond19.userOID"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#seu20" name="user" gr:x="1320" gr:y="460" entity="User">
+      <Selector id="sv3#seu20#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu20#su23#kcond16" name="KeyCondition20" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu20#oln24" name="Flow38" to="sv3#mathu1">
+        <LinkParameter id="sv3#seu20#oln24#par73" name="puntos_Cantidad_entrada" source="User#att27Array" target="sv3#mathu1#mathv1"/>
+      </OKLink>
+    </SelectorUnit>
+    <ModifyUnit id="sv3#mfu2" name="Updatepoinst" gr:x="1685" gr:y="455" entity="User">
+      <Selector id="sv3#mfu2#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#mfu2#su25#kcond18" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#mfu2#oln25" name="OKFlow30" to="sv3#cru4"/>
+      <KOLink id="sv3#mfu2#kln8" name="KOFlow6" to="sv3#page9#mssu5">
+        <LinkParameter id="sv3#mfu2#kln8#par74" name="update error_Shown Messages" target="sv3#page9#mssu5.shownMessages" sourceValue="update error"/>
+      </KOLink>
+    </ModifyUnit>
+    <SelectorUnit id="sv3#seu21" name="selector user" gr:x="1570" gr:y="-95" entity="User">
+      <Selector id="sv3#seu21#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu21#su29#kcond19" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu21#oln26" name="OKFlow18" to="sv3#page9#pwu9" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#seu22" name="Select Geocach" gr:x="1190" gr:y="115" entity="ent1">
+      <Selector id="sv3#seu22#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu22#su30#kcond20" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu22#oln27" name="OKFlow11" to="sv3#page9#dau1" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#seu23" name="Selector dificultad" gr:x="1225" gr:y="325" entity="ent3">
+      <Selector id="sv3#seu23#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu23#su31#kcond21" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu23#oln28" name="OKFlow32" to="sv3#seu20" automaticCoupling="true"/>
+      <Link id="sv3#seu23#ln19" name="Flow43" to="sv3#cru4" type="transport" validate="true">
+        <LinkParameter id="sv3#seu23#ln19#par75" name="puntos_puntos" source="ent3#att24Array" target="sv3#cru4.ent2#att26"/>
+      </Link>
+      <Link id="sv3#seu23#ln21" name="Flow44" to="sv3#mathu1" type="transport" validate="true">
+        <LinkParameter id="sv3#seu23#ln21#par84" name="puntos_Cantidad_sumar" source="ent3#att24Array" target="sv3#mathu1#mathv2"/>
+      </Link>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>

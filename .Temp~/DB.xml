@@ -14,6 +14,7 @@
     <Column sqlTypeId="92" indexed="unknown" autoIncrement="false" type="time" size="15" decimalDigits="6" name="date" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="user_oid" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="geocach_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="puntos" primaryKey="false" notNull="false"/>
     <ForeignKey localColumnName="geocach_oid" foreignColumnName="oid" name="fk_founded_geocach_geocach" foreignTableName="geocach" foreignSchemaName="public"/>
     <ForeignKey localColumnName="user_oid" foreignColumnName="oid" name="fk_founded_geocach_user" foreignTableName="user" foreignSchemaName="public"/>
   </Table>
