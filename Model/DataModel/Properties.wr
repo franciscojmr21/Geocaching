@@ -72,8 +72,7 @@
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public"/>
   <Entity gr:x="760" gr:y="260" id="ent3" name="Dificultad" duration="persistent" attributeOrder="ent3#att9 ent3#att13 ent3#att24" db:database="db1" db:table="dificultad">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att13" name="nombre" type="string" db:column="nombre"/>

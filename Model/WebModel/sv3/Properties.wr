@@ -27,7 +27,7 @@
         <AttributesCondition id="sv3#seu14#su15#acond5" name="AttCondition3" predicate="eq" booleanOperator="and" implied="false" attributes="ent1#att28"/>
       </Selector>
       <OKLink id="sv3#seu14#oln13" name="Flow19" to="sv3#page4#gmu1">
-        <LinkParameter id="sv3#seu14#oln13#par69" name="description_Marker Info" source="ent1#att3Array" target="sv3#page4#gmu1.markerInfo"/>
+        <LinkParameter id="sv3#seu14#oln13#par69" name="description_Marker Info" source="ent1#att2Array" target="sv3#page4#gmu1.markerInfo"/>
         <LinkParameter id="sv3#seu14#oln13#par70" name="coordenadas_Marker Coordinates" source="ent1#att4Array" target="sv3#page4#gmu1.markerCoords"/>
         <LinkParameter id="sv3#seu14#oln13#par71" name="name_Marker Title" source="ent1#att2Array" target="sv3#page4#gmu1.markerTitle"/>
       </OKLink>
