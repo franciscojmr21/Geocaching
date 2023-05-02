@@ -5,5 +5,41 @@
         <LinkParameter id="sv1#lgu1#kln1#par3" name="Error Message_Shown Messages" source="errorMessage" target="sv1#page1#mssu1.shownMessages"/>
       </KOLink>
     </LoginUnit>
+    <CreateUnit gr:x="960" gr:y="240" id="sv1#cru5" name="add user" entity="User">
+      <OKLink id="sv1#cru5#oln26" name="OKFlow26" to="sv1#page1" automaticCoupling="true" gr:bendpoints="-226,58,529,103"/>
+    </CreateUnit>
+    <SelectorUnit gr:x="415" gr:y="315" id="sv1#seu19" name="Selector user" entity="User">
+      <Selector id="sv1#seu19#su22" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#seu19#su22#acond9" name="username" predicate="eq" booleanOperator="and" implied="false" attributes="userName"/>
+      </Selector>
+      <OKLink id="sv1#seu19#oln13" name="OKFlow13" to="sv1#inn1">
+        <LinkParameter id="sv1#seu19#oln13#par70" name="oid_Input" source="userOIDArray" target="sv1#inn1.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="575" gr:y="425" id="sv1#inn1" name="Is Not Null1">
+      <KOLink id="sv1#inn1#kln9" name="KOFlow9" to="sv1#seu27" automaticCoupling="true"/>
+      <OKLink id="sv1#inn1#oln20" name="OKFlow20" to="sv1#page11#mssu6">
+        <LinkParameter id="sv1#inn1#oln20#par72" name="Error, el nombre de usuario o correo ya existe_Shown Messages" sourceValue="Error, el nombre de usuario ya existe" target="sv1#page11#mssu6.shownMessages"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <TimeUnit gr:x="1080" gr:y="360" id="sv1#tmu5" name="Time5">
+      <OKLink id="sv1#tmu5#oln23" name="OKFlow23" to="sv1#cru5">
+        <LinkParameter id="sv1#tmu5#oln23#par93" name="Current/Input Timestamp_fecha_alta" source="currentTimestamp" target="sv1#cru5.User#att14"/>
+      </OKLink>
+    </TimeUnit>
+    <SelectorUnit id="sv1#seu27" name="Selector user" gr:x="725" gr:y="420" entity="User">
+      <Selector id="sv1#seu27#su35" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#seu27#su35#acond14" name="email" predicate="eq" booleanOperator="and" implied="false" attributes="email"/>
+      </Selector>
+      <OKLink id="sv1#seu27#oln34" name="KOFlow11" to="sv1#inn2">
+        <LinkParameter id="sv1#seu27#oln34#par104" name="oid_Input" source="userOIDArray" target="sv1#inn2.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit id="sv1#inn2" name="Is Not Null1" gr:x="960" gr:y="485">
+      <KOLink id="sv1#inn2#kln10" name="KOFlow9" to="sv1#tmu5" automaticCoupling="true"/>
+      <OKLink id="sv1#inn2#oln33" name="OKFlow20" to="sv1#page11#mssu6">
+        <LinkParameter id="sv1#inn2#oln33#par103" name="Error, el nombre de usuario o correo ya existe_Shown Messages" target="sv1#page11#mssu6.shownMessages" sourceValue="Error, el correo ya existe"/>
+      </OKLink>
+    </IsNotNullUnit>
   </OperationUnits>
 </SiteView>
