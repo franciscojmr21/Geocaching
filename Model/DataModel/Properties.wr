@@ -58,7 +58,7 @@
     <Attribute id="ent1#att3" name="description" type="text" db:column="description"/>
     <Attribute id="ent1#att4" name="coordenadas" type="string" db:column="coordenadas"/>
     <Attribute id="ent1#att6" name="creation_date" type="timestamp" db:column="creation_date"/>
-    <Attribute id="ent1#att7" name="last_modify" type="date" db:column="last_modify"/>
+    <Attribute id="ent1#att7" name="last_modify" type="timestamp" db:column="last_modify"/>
     <Attribute id="ent1#att10" name="dificulty" type="integer" derivationQuery="simpleImported::Self.rel3#role6.ent3#att9"/>
     <Attribute id="ent1#att11" name="size" type="integer" derivationQuery="simpleImported::Self.rel6#role12.ent4#att15"/>
     <Attribute id="ent1#att20" name="owner" type="integer" derivationQuery="simpleImported::Self.rel2#role4.userOID"/>
@@ -72,8 +72,7 @@
       <db:JoinColumn attribute="ent1#att1" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/Geocaching" username="postgres" password="admin" schema="public"/>
   <Entity gr:x="760" gr:y="260" id="ent3" name="Dificultad" duration="persistent" attributeOrder="ent3#att9 ent3#att13 ent3#att24" db:database="db1" db:table="dificultad">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att13" name="nombre" type="string" db:column="nombre"/>
@@ -88,7 +87,7 @@
     <Attribute id="ent2#att8" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att17" name="user" type="integer" derivationQuery="simpleImported::Self.rel4#role8.userOID"/>
     <Attribute id="ent2#att18" name="geocach" type="integer" derivationQuery="simpleImported::Self.rel5#role10.ent1#att1"/>
-    <Attribute id="ent2#att19" name="date" type="time" db:column="date"/>
+    <Attribute id="ent2#att19" name="date" type="timestamp" db:column="date"/>
     <Attribute id="ent2#att21" name="puntos" db:column="puntos" type="integer" key="false"/>
   </Entity>
   <Relationship id="rel4" name="User_Founded_Geocach" sourceEntity="User" targetEntity="ent2" db:database="db1" db:table="founded_geocach">
