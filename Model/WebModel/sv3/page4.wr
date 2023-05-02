@@ -1,7 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="535" gr:y="95" id="sv3#page4" name="Home" landmark="false" layout:cellLayout="AdminLTE/Accordion">
   <ContentUnits>
     <GoogleMapUnit id="sv3#page4#gmu1" name="Mapa de Geocaches" gr:x="225" gr:y="0" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="500" mapHeight="500" mapZoomLevel="13"/>
-    <EntryUnit gr:x="5" gr:y="5" id="sv3#page4#enu2" name="Ubicaci&#243;n" linkOrder="sv3#page4#enu2#ln20 sv3#page4#enu2#ln22">
+    <EntryUnit gr:x="5" gr:y="5" id="sv3#page4#enu2" name="Ubicaci&#243;n" linkOrder="sv3#page4#enu2#ln20">
       <VRules>
         <FormNotEmptyValidationRule id="sv3#page4#enu2#fnevr1" name="Form Not Empty1"/>
       </VRules>
@@ -11,9 +11,6 @@
       <SelectionField id="sv3#page4#enu2#sfld5" name="City" type="string" preselectValue="1"/>
       <Link id="sv3#page4#enu2#ln30" name="Flow18" to="sv3#seu14" type="transport" validate="true">
         <LinkParameter id="sv3#page4#enu2#ln30#par67" name="Provincia_AttCondition3" source="sv3#page4#enu2#sfld5" target="sv3#seu14#su15#acond5"/>
-      </Link>
-      <Link id="sv3#page4#enu2#ln22" name="Cargar Geocaches" to="sv3#page4#pwu4" type="normal" validate="true">
-        <LinkParameter id="sv3#page4#enu2#ln22#par34" name="City_AttCondition2" source="sv3#page4#enu2#sfld5" target="sv3#page4#pwu4#su2#acond2"/>
       </Link>
     </EntryUnit>
     <SelectorUnit gr:x="0" gr:y="105" id="sv3#page4#seu8" name="Select Provincia" entity="ent6">
@@ -49,7 +46,6 @@
         <layout:Unit unitId="sv3#page4#enu2">
           <layout:Field field="sv3#page4#enu2#sfld5"/>
           <layout:Link link="sv3#page4#enu2#ln20"/>
-          <layout:Link link="sv3#page4#enu2#ln22"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

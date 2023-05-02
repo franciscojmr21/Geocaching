@@ -5,16 +5,18 @@
     <Property name="ajaxActivated">true</Property>
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
+    <Property name="commonsLibDir">D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.commons.libs_7.2.18.201903231300\lib</Property>
+    <Property name="dbConfigPath">C:\Users\fjavi\AppData\Local\Temp\WRDBConfig2604282395690803259.xml</Property>
     <Property name="commonsLibDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.commons.libs_7.2.18.201903231300\lib</Property>
     <Property name="dbConfigPath">C:\Users\iboca\AppData\Local\Temp\WRDBConfig5271357241812809479.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\configuration\org.eclipse.osgi\bundles\49\1\.cp</Property>
     <Property name="derbySystemHome">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">50319</Property>
+    <Property name="eventSocketPort">56492</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">202305021859</Property>
-    <Property name="helpersPluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.generator.helpers_7.2.18.201903231300</Property>
+    <Property name="generationTime">202305021857</Property>
+    <Property name="helpersPluginDir">D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.generator.helpers_7.2.18.201903231300</Property>
     <Property name="hostAlwaysAllowed">false</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -25,7 +27,7 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching</Property>
     <Property name="projectName">Geocaching</Property>
-    <Property name="projectPath">C:\Users\iboca\AppData\Local\Temp\Project6496287332320841782.wr</Property>
+    <Property name="projectPath">C:\Users\fjavi\AppData\Local\Temp\Project3888605941540223708.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.ide.ui_7.2.18.201903231300</Property>
