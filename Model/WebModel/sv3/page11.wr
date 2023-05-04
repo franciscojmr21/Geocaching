@@ -1,3 +1,4 @@
+
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="195" gr:y="1005" id="sv3#page11" name="Editar Usuario">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#page11#enu8" name="Editar Usuario" entity="User" linkOrder="sv3#page11#enu8#ln40">
@@ -12,6 +13,15 @@
       </Link>
     </EntryUnit>
     <MultiMessageUnit gr:x="40" gr:y="140" id="sv3#page11#mssu6" name="Error"/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="590" id="sv3#page11" name="Ranking" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page11#pwu10" name="Ranking" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName User#att27 email User#att14">
+      <DefaultSortAttribute attribute="User#att27" order="descending"/>
+      <DefaultSortAttribute attribute="userOID" order="ascending"/>
+      <Selector id="sv3#page11#pwu10#su22" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page11#pwu10#su22#acond9" name="AttCondition9" predicate="neq" booleanOperator="or" implied="true" attributes="userName" ignoreCase="false" value="admin"/>
+      </Selector>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -21,6 +31,11 @@
           <layout:Field field="sv3#page11#enu8#fld15"/>
           <layout:Field field="sv3#page11#enu8#fld16"/>
           <layout:Field field="sv3#page11#enu8#fld17"/>
+        <layout:Unit unitId="sv3#page11#pwu10">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="User#att27"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att14"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
