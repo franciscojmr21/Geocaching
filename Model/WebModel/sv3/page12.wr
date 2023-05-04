@@ -1,0 +1,50 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="150" gr:y="1040" id="sv3#page12" name="Editar Usuario">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page12#enu9" name="Editar" entity="User" linkOrder="sv3#page12#enu9#ln53" fieldOrder="sv3#page12#enu9#fld18 sv3#page12#enu9#fld20 sv3#page12#enu9#fld19">
+      <Field id="sv3#page12#enu9#fld18" name="userName" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv3#page12#enu9#fld19" name="password" type="string" modifiable="true" attribute="password"/>
+      <Field id="sv3#page12#enu9#fld20" name="email" type="string" modifiable="true" attribute="email"/>
+      <Link id="sv3#page12#enu9#ln53" name="Confirmar" to="sv3#mfu3" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="100" gr:y="130" id="sv3#page12#mssu7" name="Error"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page12#enu9">
+          <layout:Link link="sv3#page12#enu9#ln53"/>
+          <layout:Field field="sv3#page12#enu9#fld18"/>
+          <layout:Field field="sv3#page12#enu9#fld20"/>
+          <layout:Field field="sv3#page12#enu9#fld19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page12#mssu7"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

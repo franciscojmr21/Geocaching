@@ -13,6 +13,9 @@
         <LinkParameter id="sv2#page7#enu4#ln10#par19" name="0_puntos" sourceValue="0" target="sv2#cru3.User#att27"/>
       </Link>
       <Link id="sv2#page7#enu4#ln11" name="Create User" to="sv2#tmu4" type="normal" automaticCoupling="true" validate="true"/>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv2#page7#enu4#fnevr5" name="Form Not Empty5"/>
+      </VRules>
     </EntryUnit>
     <MultiMessageUnit id="sv2#page7#mssu4" name="Message2" gr:x="275" gr:y="190"/>
     <SelectorUnit id="sv2#page7#seu7" name="Rol Selector" gr:x="145" gr:y="0" entity="Group">
@@ -32,6 +35,9 @@
       </Link>
       <Field id="sv2#page7#enu5#fld3" name="Nombre" type="string" modifiable="true"/>
       <Field id="sv2#page7#enu5#fld4" name="Coordenadas" type="string" modifiable="true"/>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv2#page7#enu5#fnevr4" name="Form Not Empty4"/>
+      </VRules>
     </EntryUnit>
     <PowerIndexUnit gr:x="0" gr:y="15" id="sv2#page7#pwu2" name="Cities" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att23"/>
   </ContentUnits>
