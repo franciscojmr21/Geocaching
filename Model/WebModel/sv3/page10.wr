@@ -17,6 +17,9 @@
         <LinkParameter id="sv3#page10#enu6#ln23#par50" name="size_Size.oid(GeocachToSize)" source="sv3#page10#enu6#sfld8" target="sv3#mfu1.rel6#role12.ent4#att15"/>
       </Link>
       <Link id="sv3#page10#enu6#ln26" name="Guardar Cambios" to="sv3#tmu2" type="normal" automaticCoupling="true" validate="true"/>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv3#page10#enu6#fnevr6" name="Form Not Empty6"/>
+      </VRules>
     </EntryUnit>
     <SelectorUnit id="sv3#page10#seu16" name="Size" gr:x="260" gr:y="160" entity="ent4">
       <Link id="sv3#page10#seu16#ln35" name="Flow41" to="sv3#page10#enu6" type="transport" validate="true">

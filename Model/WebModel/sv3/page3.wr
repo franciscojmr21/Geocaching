@@ -22,6 +22,9 @@
         <LinkParameter id="sv3#page3#enu3#ln32#par81" name="Provincia_Provincia.oid(GeocachToProvincia)" source="sv3#page3#enu3#sfld2" target="sv3#cru2.rel7#role14.ent6#att22"/>
         <LinkParameter id="sv3#page3#enu3#ln32#par82" name="Tama&#241;o_Size.oid(GeocachToSize)" source="sv3#page3#enu3#sfld3" target="sv3#cru2.rel6#role12.ent4#att15"/>
       </Link>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv3#page3#enu3#fnevr8" name="Form Not Empty8"/>
+      </VRules>
     </EntryUnit>
     <MultiMessageUnit gr:x="240" gr:y="140" id="sv3#page3#mssu3" name="Error"/>
     <SelectorUnit gr:x="445" gr:y="0" id="sv3#page3#seu2" name="Dificultad" entity="ent3">

@@ -8,6 +8,9 @@
         <LinkParameter id="sv1#page1#enu1#ln1#par2" name="password_Password" source="sv1#page1#enu1#fld2" target="sv1#lgu1.password"/>
       </Link>
       <Link id="sv1#page1#enu1#ln40" name="Register" to="sv1#page11" automaticCoupling="true" type="normal" validate="true"/>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv1#page1#enu1#fnevr3" name="Form Not Empty3"/>
+      </VRules>
     </EntryUnit>
     <MultiMessageUnit gr:x="0" gr:y="15" id="sv1#page1#mssu1" name="Error"/>
   </ContentUnits>
