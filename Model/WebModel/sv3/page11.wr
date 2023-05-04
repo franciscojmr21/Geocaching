@@ -36,6 +36,7 @@
           <layout:Attribute attribute="User#att27"/>
           <layout:Attribute attribute="email"/>
           <layout:Attribute attribute="User#att14"/>
+          </layout:Unit>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
