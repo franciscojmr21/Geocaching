@@ -21,7 +21,7 @@
         <LinkParameter id="sv2#page7#seu7#ln12#par39" name="groupName_rol [label]" source="groupNameArray" target="sv2#page7#enu4#sfld4_label"/>
       </Link>
     </SelectorUnit>
-    <PowerIndexUnit id="sv2#page7#pwu3" name="Users" gr:x="325" gr:y="75" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName email" linkOrder="sv2#page7#pwu3#ln34 sv2#page7#pwu3#ln15">
+    <PowerIndexUnit id="sv2#page7#pwu3" name="Users" gr:x="325" gr:y="75" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName email User#att12" linkOrder="sv2#page7#pwu3#ln34 sv2#page7#pwu3#ln15">
       <Link id="sv2#page7#pwu3#ln34" name="Geocaches creados" to="sv2#seu4" type="normal" validate="true" automaticCoupling="true"/>
       <Link id="sv2#page7#pwu3#ln15" name="Geocaches encontrados" to="sv2#seu12" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
@@ -83,10 +83,11 @@
     <layout:Row>
       <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page7#pwu3">
-          <layout:Attribute attribute="userName"/>
-          <layout:Attribute attribute="email"/>
           <layout:Link link="sv2#page7#pwu3#ln34"/>
           <layout:Link link="sv2#page7#pwu3#ln15"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att12"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
