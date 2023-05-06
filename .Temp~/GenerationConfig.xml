@@ -7,6 +7,7 @@
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.commons.libs_7.2.18.201903231300\lib</Property>
     <Property name="dbConfigPath">C:\Users\carlo\AppData\Local\Temp\WRDBConfig1015955801997496946.xml</Property>
+
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\configuration\org.eclipse.osgi\bundles\49\1\.cp</Property>
     <Property name="derbySystemHome">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby</Property>
@@ -14,18 +15,20 @@
     <Property name="eventSocketPort">51477</Property>
     <Property name="excludedProjects" type="list"></Property>
     <Property name="generationTime">202305041923</Property>
+
     <Property name="helpersPluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.generator.helpers_7.2.18.201903231300</Property>
     <Property name="hostAlwaysAllowed">false</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
     <Property name="localDeploy">true</Property>
-    <Property name="lockDir">C:\Users\carlo\Desktop\Geocaching\.Temp~</Property>
+    <Property name="lockDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching\.Temp~</Property>
     <Property name="normalizeDescriptors">false</Property>
     <Property name="outputPath">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\Tomcat\webapps\Geocaching</Property>
     <Property name="phases">All</Property>
-    <Property name="projectDir">C:\Users\carlo\Desktop\Geocaching</Property>
+    <Property name="projectDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\Geocaching</Property>
     <Property name="projectName">Geocaching</Property>
     <Property name="projectPath">C:\Users\carlo\AppData\Local\Temp\Project3464761560247671058.wr</Property>
+
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.ide.ui_7.2.18.201903231300</Property>
@@ -33,6 +36,7 @@
     <Property name="wrBuildId">201903231300</Property>
     <Property name="wrGenerateOldValidationRules">false</Property>
     <Property name="wrModelStatistics">pages=12|units=79</Property>
+
     <Property name="wrVersion">7.2.18</Property>
   </Properties>
   <Plugins>
