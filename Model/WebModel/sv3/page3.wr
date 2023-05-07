@@ -6,13 +6,37 @@
       </Selector>
     </PowerIndexUnit>
     <EntryUnit gr:x="465" gr:y="130" id="sv3#page3#enu3" name="Create Geocach" entity="ent1" linkOrder="sv3#page3#enu3#ln4" fieldOrder="sv3#page3#enu3#fld6 sv3#page3#enu3#sfld3 sv3#page3#enu3#sfld1 sv3#page3#enu3#fld7 sv3#page3#enu3#fld8 sv3#page3#enu3#sfld2">
-      <Field id="sv3#page3#enu3#fld6" name="Nombre" type="string" modifiable="true" attribute="ent1#att2"/>
-      <Field id="sv3#page3#enu3#fld7" name="Descripci&#243;n" type="text" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv3#page3#enu3#fld6" name="Nombre" type="string" modifiable="true" attribute="ent1#att2">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page3#enu3#fld6#vl4" name="Value Length4" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page3#enu3#fld7" name="Descripci&#243;n" type="text" modifiable="true" attribute="ent1#att3">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page3#enu3#fld7#vl2" name="Value Length2" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
       <Link id="sv3#page3#enu3#ln4" name="Create Geocach" to="sv3#tmu1" type="normal" validate="true" automaticCoupling="true"/>
-      <SelectionField id="sv3#page3#enu3#sfld1" type="integer" name="Dificultad" splitOutput="false" preselectValue="1"/>
-      <SelectionField id="sv3#page3#enu3#sfld3" type="integer" name="Tama&#241;o" preselectValue="1"/>
-      <Field id="sv3#page3#enu3#fld8" name="Coordenadas" type="string" modifiable="true" attribute="ent1#att4" hidden="false"/>
-      <SelectionField id="sv3#page3#enu3#sfld2" name="Provincia" type="integer"/>
+      <SelectionField id="sv3#page3#enu3#sfld1" type="integer" name="Dificultad" splitOutput="false" preselectValue="1">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page3#enu3#sfld1#vl3" name="Value Length3" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="sv3#page3#enu3#sfld3" type="integer" name="Tama&#241;o" preselectValue="1">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page3#enu3#sfld3#vl6" name="Value Length6" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </SelectionField>
+      <Field id="sv3#page3#enu3#fld8" name="Coordenadas" type="string" modifiable="true" attribute="ent1#att4" hidden="false">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page3#enu3#fld8#vl1" name="Value Length1" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv3#page3#enu3#sfld2" name="Provincia" type="integer">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page3#enu3#sfld2#vl5" name="Value Length5" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </SelectionField>
       <Link id="sv3#page3#enu3#ln32" name="Flow32" to="sv3#cru2" type="transport" validate="true">
         <LinkParameter id="sv3#page3#enu3#ln32#par76" name="Coordenadas_coordenadas" source="sv3#page3#enu3#fld8" target="sv3#cru2.ent1#att4"/>
         <LinkParameter id="sv3#page3#enu3#ln32#par77" name="Descripci&#243;n_description" source="sv3#page3#enu3#fld7" target="sv3#cru2.ent1#att3"/>
@@ -22,9 +46,7 @@
         <LinkParameter id="sv3#page3#enu3#ln32#par81" name="Provincia_Provincia.oid(GeocachToProvincia)" source="sv3#page3#enu3#sfld2" target="sv3#cru2.rel7#role14.ent6#att22"/>
         <LinkParameter id="sv3#page3#enu3#ln32#par82" name="Tama&#241;o_Size.oid(GeocachToSize)" source="sv3#page3#enu3#sfld3" target="sv3#cru2.rel6#role12.ent4#att15"/>
       </Link>
-      <VRules>
-        <FormNotEmptyValidationRule id="sv3#page3#enu3#fnevr8" name="Form Not Empty8"/>
-      </VRules>
+      <VRules/>
     </EntryUnit>
     <MultiMessageUnit gr:x="240" gr:y="140" id="sv3#page3#mssu3" name="Error"/>
     <SelectorUnit gr:x="445" gr:y="0" id="sv3#page3#seu2" name="Dificultad" entity="ent3">
