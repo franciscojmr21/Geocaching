@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="590" id="sv3#page11" name="Ranking" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page11#pwu10" name="Ranking" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName User#att27 email User#att14">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page11#pwu10" name="Ranking" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName User#att27 email">
       <DefaultSortAttribute attribute="User#att27" order="descending"/>
       <DefaultSortAttribute attribute="userOID" order="ascending"/>
       <Selector id="sv3#page11#pwu10#su22" defaultPolicy="fill" booleanOperator="and">
@@ -15,7 +15,6 @@
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="User#att27"/>
           <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att14"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
