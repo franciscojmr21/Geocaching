@@ -1,9 +1,22 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="580" gr:y="35" id="sv1#page11" name="Register">
   <ContentUnits>
     <EntryUnit id="sv1#page11#enu8" name="Login" gr:x="0" gr:y="50" entity="User" fieldOrder="sv1#page11#enu8#fld15 sv1#page11#enu8#fld17 sv1#page11#enu8#fld16" linkOrder="sv1#page11#enu8#ln49">
-      <Field id="sv1#page11#enu8#fld15" name="Nombre Usuario" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv1#page11#enu8#fld16" name="Contrase&#241;a" type="password" modifiable="true" attribute="password"/>
-      <Field id="sv1#page11#enu8#fld17" name="email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv1#page11#enu8#fld15" name="Nombre Usuario" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <ValueLengthValidationRule id="sv1#page11#enu8#fld15#vl9" name="Value Length9" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page11#enu8#fld16" name="Contrase&#241;a" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <ValueLengthValidationRule id="sv1#page11#enu8#fld16#vl7" name="Value Length7" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page11#enu8#fld17" name="email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <ValueLengthValidationRule id="sv1#page11#enu8#fld17#vl8" name="Value Length8" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+          <EMailValidationRule id="sv1#page11#enu8#fld17#email2" name="EMail2" errorMessage="Este campo debe ser de tipo correo"/>
+        </VRules>
+      </Field>
       <Link id="sv1#page11#enu8#ln49" name="Register" to="sv1#seu19" type="normal" validate="true">
         <LinkParameter id="sv1#page11#enu8#ln49#par71" name="Nombre Usuario_AttCondition9" source="sv1#page11#enu8#fld15" target="sv1#seu19#su22#acond9"/>
         <LinkParameter id="sv1#page11#enu8#ln49#par95" name="email_AttCondition11" source="sv1#page11#enu8#fld17" target="sv1#seu19#su22#acond11"/>
@@ -14,9 +27,7 @@
         <LinkParameter id="sv1#page11#enu8#ln50#par91" name="0_puntos" sourceValue="0" target="sv1#cru5.User#att27"/>
         <LinkParameter id="sv1#page11#enu8#ln50#par92" name="Nombre Usuario_userName" source="sv1#page11#enu8#fld15" target="sv1#cru5.userName"/>
       </Link>
-      <VRules>
-        <FormNotEmptyValidationRule id="sv1#page11#enu8#fnevr2" name="Form Not Empty2"/>
-      </VRules>
+      <VRules/>
       <Link id="sv1#page11#enu8#ln54" name="Flow54" to="sv1#seu27" type="transport" validate="true" gr:bendpoints="6,169,-139,-136">
         <LinkParameter id="sv1#page11#enu8#ln54#par105" name="email_email" source="sv1#page11#enu8#fld17" target="sv1#seu27#su35#acond14"/>
       </Link>
