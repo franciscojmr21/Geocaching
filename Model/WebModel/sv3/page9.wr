@@ -46,48 +46,9 @@
         <KeyCondition id="sv3#page9#pwu11#su63#kcond38" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
     </PowerIndexUnit>
+    <GoogleMapUnit id="sv3#page9#gmu3" name="Mapa del Geocach" gr:x="180" gr:y="125" mapType="ROADMAP" isAdjustable="false" mapsProvider="sdp1" mapWidth="500" mapHeight="500" mapZoomLevel="13"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page9#dau1">
-          <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att3"/>
-          <layout:Attribute attribute="ent1#att4"/>
-          <layout:Link link="sv3#page9#dau1#ln39"/>
-          <layout:Link link="sv3#page9#dau1#ln72"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page9#pwu9">
-          <layout:Attribute attribute="userName"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page9#mssu5"/>
@@ -105,7 +66,49 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page9#dau1">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Link link="sv3#page9#dau1#ln39"/>
+          <layout:Link link="sv3#page9#dau1#ln72"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6" rowspan="3">
+        <layout:Unit unitId="sv3#page9#gmu3"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page9#pwu9">
+          <layout:Attribute attribute="userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv3#page9#pwu11">
           <layout:Attribute attribute="userName"/>
         </layout:Unit>
@@ -122,5 +125,20 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
+  <layout:UnitConfiguration unitType="GoogleMapUnit" layout:style="AdminLTE" layout:unitLayout="StoreTemplates/Default" layout:frameLayout="AdminLTE/Box" layout:linkLayout="AdminLTE/Default"/>
 </Page>
