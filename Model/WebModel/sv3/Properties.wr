@@ -102,7 +102,7 @@
       <Selector id="sv3#mfu1#su21" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#mfu1#su21#kcond15" name="KeyCondition20" predicate="in" implied="false"/>
       </Selector>
-      <KOLink id="sv3#mfu1#kln5" name="KOFlow5" to="sv3#page10#mssu2" gr:bendpoints="41,237,-239,67">
+      <KOLink id="sv3#mfu1#kln5" name="KOFlow5" to="sv3#page10#mssu2" gr:bendpoints="38,204,-202,34">
         <LinkParameter id="sv3#mfu1#kln5#par37" name="Error al modificar el geocach_Shown Messages" target="sv3#page10#mssu2.shownMessages" sourceValue="Error al modificar el geocach"/>
       </KOLink>
       <OKLink id="sv3#mfu1#oln19" name="OKFlow19" to="sv3#page6" automaticCoupling="true"/>
@@ -343,5 +343,14 @@
         <LinkParameter id="sv3#seu51#oln94#par195" name="puntos_Cantidad_entrada" source="User#att27Array" target="sv3#mathu6#mathv9"/>
       </OKLink>
     </SelectorUnit>
+    <DeleteUnit gr:x="140" gr:y="1350" id="sv3#dlu1" name="DeleteGeocach" entity="ent1">
+      <Selector id="sv3#dlu1#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#dlu1#su40#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#dlu1#oln35" name="OKFlow35" to="sv3#page6" automaticCoupling="true" gr:bendpoints="78,-104,-427,111"/>
+      <KOLink id="sv3#dlu1#kln12" name="KOFlow12" to="sv3#page6#mssu8" gr:bendpoints="139,32,-116,12">
+        <LinkParameter id="sv3#dlu1#kln12#par48" name="Error al borrar el geocach_Shown Messages" sourceValue="Error al borrar el geocach" target="sv3#page6#mssu8.shownMessages"/>
+      </KOLink>
+    </DeleteUnit>
   </OperationUnits>
 </SiteView>

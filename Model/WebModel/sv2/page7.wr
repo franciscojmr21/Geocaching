@@ -1,10 +1,26 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page7" name="Inicio" gr:x="165" gr:y="35">
   <ContentUnits>
     <EntryUnit id="sv2#page7#enu4" name="Create User" linkOrder="sv2#page7#enu4#ln11" gr:x="140" gr:y="160" entity="User">
-      <Field id="sv2#page7#enu4#fld10" name="Nombre Usuario" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv2#page7#enu4#fld11" name="Contrase&#241;a" type="password" modifiable="true" attribute="password"/>
-      <Field id="sv2#page7#enu4#fld12" name="Correo" type="string" modifiable="true" attribute="email"/>
-      <SelectionField id="sv2#page7#enu4#sfld4" name="Rol" type="string"/>
+      <Field id="sv2#page7#enu4#fld10" name="Nombre Usuario" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page7#enu4#fld10#vl14" name="Value Length14" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page7#enu4#fld11" name="Contrase&#241;a" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page7#enu4#fld11#vl12" name="Value Length12" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page7#enu4#fld12" name="Correo" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page7#enu4#fld12#vl13" name="Value Length13" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv2#page7#enu4#sfld4" name="Rol" type="string">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page7#enu4#sfld4#vl15" name="Value Length15" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </SelectionField>
       <Link id="sv2#page7#enu4#ln10" name="Flow5" to="sv2#cru3" type="transport" validate="true">
         <LinkParameter id="sv2#page7#enu4#ln10#par28" name="email_email" source="sv2#page7#enu4#fld12" target="sv2#cru3.email"/>
         <LinkParameter id="sv2#page7#enu4#ln10#par29" name="password_password" source="sv2#page7#enu4#fld11" target="sv2#cru3.password"/>
@@ -13,9 +29,7 @@
         <LinkParameter id="sv2#page7#enu4#ln10#par19" name="0_puntos" sourceValue="0" target="sv2#cru3.User#att27"/>
       </Link>
       <Link id="sv2#page7#enu4#ln11" name="Create User" to="sv2#tmu4" type="normal" automaticCoupling="true" validate="true"/>
-      <VRules>
-        <FormNotEmptyValidationRule id="sv2#page7#enu4#fnevr5" name="Form Not Empty5"/>
-      </VRules>
+      <VRules/>
     </EntryUnit>
     <MultiMessageUnit id="sv2#page7#mssu4" name="Message2" gr:x="275" gr:y="190"/>
     <SelectorUnit id="sv2#page7#seu7" name="Rol Selector" gr:x="145" gr:y="0" entity="Group">
@@ -33,11 +47,17 @@
         <LinkParameter id="sv2#page7#enu5#ln5#par7" name="Nombre_nombre" source="sv2#page7#enu5#fld3" target="sv2#cru1.ent6#att23"/>
         <LinkParameter id="sv2#page7#enu5#ln5#par61" name="Coordenadas_coordenadas" source="sv2#page7#enu5#fld4" target="sv2#cru1.ent6#att29"/>
       </Link>
-      <Field id="sv2#page7#enu5#fld3" name="Nombre" type="string" modifiable="true"/>
-      <Field id="sv2#page7#enu5#fld4" name="Coordenadas" type="string" modifiable="true"/>
-      <VRules>
-        <FormNotEmptyValidationRule id="sv2#page7#enu5#fnevr4" name="Form Not Empty4"/>
-      </VRules>
+      <Field id="sv2#page7#enu5#fld3" name="Nombre" type="string" modifiable="true">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page7#enu5#fld3#vl11" name="Value Length11" predicate="min" value="1" errorMessage="Este campo no puede estar vac&#237;o"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page7#enu5#fld4" name="Coordenadas" type="string" modifiable="true">
+        <VRules>
+          <ValueLengthValidationRule id="sv2#page7#enu5#fld4#vl10" name="Value Length10" predicate="min" errorMessage="Este campo no puede estar vac&#237;o" value="1"/>
+        </VRules>
+      </Field>
+      <VRules/>
     </EntryUnit>
     <PowerIndexUnit gr:x="0" gr:y="15" id="sv2#page7#pwu2" name="Cities" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att23"/>
   </ContentUnits>
