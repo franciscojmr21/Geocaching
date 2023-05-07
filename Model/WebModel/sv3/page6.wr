@@ -40,10 +40,11 @@
       </Link>
       <Link id="sv3#page6#pwu7#ln58" name="Eliminar" to="sv3#dlu1" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <PowerIndexUnit gr:x="330" gr:y="460" id="sv3#page6#pwu8" name="Geocachers Encontrados" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4">
+    <PowerIndexUnit gr:x="330" gr:y="460" id="sv3#page6#pwu8" name="Geocachers Encontrados" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4" linkOrder="sv3#page6#pwu8#ln46">
       <Selector id="sv3#page6#pwu8#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page6#pwu8#su28#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv3#page6#pwu8#ln46" name="See Details" to="sv3#seu22" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="186,-5,-524,1330;195,-317,-515,1018;256,-459,-454,876;330,-614,-380,721;367,-1272,-343,63"/>
     </PowerIndexUnit>
     <SelectorUnit gr:x="375" gr:y="145" id="sv3#page6#seu21" name="Selector21" entity="ent2">
       <Selector id="sv3#page6#seu21#su38" defaultPolicy="fill" booleanOperator="and">
@@ -71,10 +72,11 @@
       </Selector>
       <Link id="sv3#page6#seu53#ln127" name="Flow56" to="sv3#page6#seu52" type="transport" automaticCoupling="true" validate="true"/>
     </SelectorUnit>
-    <PowerIndexUnit id="sv3#page6#pwu12" name="Geocachers No Encontrados" gr:x="685" gr:y="450" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4">
+    <PowerIndexUnit id="sv3#page6#pwu12" name="Geocachers No Encontrados" gr:x="685" gr:y="450" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4" linkOrder="sv3#page6#pwu12#ln45">
       <Selector id="sv3#page6#pwu12#su72" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page6#pwu12#su72#kcond46" name="KeyCondition24" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv3#page6#pwu12#ln45" name="See Details" to="sv3#seu22" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="158,-52,-187,1273;142,-617,-203,708;106,-1270,-239,55"/>
     </PowerIndexUnit>
     <MultiMessageUnit gr:x="10" gr:y="400" id="sv3#page6#mssu8" name="Error"/>
   </ContentUnits>
@@ -152,6 +154,7 @@
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att4"/>
+          <layout:Link link="sv3#page6#pwu8#ln46"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -172,6 +175,7 @@
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att4"/>
+          <layout:Link link="sv3#page6#pwu12#ln45"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

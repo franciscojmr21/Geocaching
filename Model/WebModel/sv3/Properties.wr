@@ -156,6 +156,12 @@
       <Link id="sv3#seu22#ln48" name="OKFlow11" to="sv3#page9#dau1" automaticCoupling="true" type="transport"/>
       <OKLink id="sv3#seu22#oln30" name="OKFlow30" to="sv3#seu26" automaticCoupling="true"/>
       <Link id="sv3#seu22#ln93" name="Flow93" to="sv3#seu46" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#seu22#ln44" name="Flow60" to="sv3#page9#gmu3" type="transport" validate="true" gr:bendpoints="82,-74,-258,141;121,-209,-219,6">
+        <LinkParameter id="sv3#seu22#ln44#par34" name="coordenadas_Map Coordinates" source="ent1#att4Array" target="sv3#page9#gmu3.coords"/>
+        <LinkParameter id="sv3#seu22#ln44#par97" name="coordenadas_Marker Coordinates" source="ent1#att4Array" target="sv3#page9#gmu3.markerCoords"/>
+        <LinkParameter id="sv3#seu22#ln44#par100" name="name_Marker Info" source="ent1#att2Array" target="sv3#page9#gmu3.markerInfo"/>
+        <LinkParameter id="sv3#seu22#ln44#par101" name="name_Marker Title" source="ent1#att2Array" target="sv3#page9#gmu3.markerTitle"/>
+      </Link>
     </SelectorUnit>
     <SelectorUnit id="sv3#seu23" name="Selector dificultad" gr:x="2330" gr:y="570" entity="ent3">
       <Selector id="sv3#seu23#su31" defaultPolicy="fill" booleanOperator="and">
