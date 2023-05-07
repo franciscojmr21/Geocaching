@@ -19,6 +19,9 @@
       <Link id="sv3#page6#gtu4#ln29" name="Flow29" to="sv3#page6#seu21" type="transport" validate="true">
         <LinkParameter id="sv3#page6#gtu4#ln29#par96" name="UserCtxParam.oid_RoleCondition2 [oid]" source="sv3#page6#gtu4.UserCtxParam" target="sv3#page6#seu21#su38#rcond2.userOID"/>
       </Link>
+      <Link id="sv3#page6#gtu4#ln128" name="Flow29" to="sv3#page6#seu53" type="transport" validate="true">
+        <LinkParameter id="sv3#page6#gtu4#ln128#par197" name="UserCtxParam.oid_RoleCondition2 [oid]" source="sv3#page6#gtu4.UserCtxParam" target="sv3#page6#seu53#su71#rcond11.userOID"/>
+      </Link>
     </GetUnit>
     <PowerIndexUnit gr:x="0" gr:y="155" id="sv3#page6#pwu6" name="Amigos" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName">
       <Selector id="sv3#page6#pwu6#su26" defaultPolicy="fill" booleanOperator="and">
@@ -36,23 +39,42 @@
         <LinkParameter id="sv3#page6#pwu7#ln38#par63" name="size_size - Preselection" source="data[].ent1#att11" target="sv3#page10#enu6#sfld8_presel"/>
       </Link>
     </PowerIndexUnit>
-    <PowerIndexUnit gr:x="265" gr:y="305" id="sv3#page6#pwu8" name="Geocachers Encontrados" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4">
+    <PowerIndexUnit gr:x="330" gr:y="460" id="sv3#page6#pwu8" name="Geocachers Encontrados" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4">
       <Selector id="sv3#page6#pwu8#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page6#pwu8#su28#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
       </Selector>
     </PowerIndexUnit>
-    <SelectorUnit gr:x="495" gr:y="140" id="sv3#page6#seu21" name="Selector21" entity="ent2">
+    <SelectorUnit gr:x="375" gr:y="145" id="sv3#page6#seu21" name="Selector21" entity="ent2">
       <Selector id="sv3#page6#seu21#su38" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#page6#seu21#su38#rcond2" name="RoleCondition2" predicate="in" implied="false" role="rel4#role7"/>
+        <AttributesCondition id="sv3#page6#seu21#su38#acond31" name="AttCondition31" predicate="eq" booleanOperator="and" implied="false" attributes="ent2#att26" value="1"/>
       </Selector>
       <Link id="sv3#page6#seu21#ln56" name="Flow56" to="sv3#page6#seu28" automaticCoupling="true" type="transport" validate="true"/>
     </SelectorUnit>
-    <SelectorUnit gr:x="495" gr:y="280" id="sv3#page6#seu28" name="Selector28" entity="ent1">
+    <SelectorUnit gr:x="335" gr:y="280" id="sv3#page6#seu28" name="Selector28" entity="ent1">
       <Selector id="sv3#page6#seu28#su39" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#page6#seu28#su39#rcond6" name="RoleCondition6" predicate="in" implied="false" role="rel5#role10"/>
       </Selector>
       <Link id="sv3#page6#seu28#ln57" name="Flow57" to="sv3#page6#pwu8" automaticCoupling="true" type="transport" validate="true"/>
     </SelectorUnit>
+    <SelectorUnit id="sv3#page6#seu52" name="Selector28" gr:x="695" gr:y="290" entity="ent1">
+      <Selector id="sv3#page6#seu52#su70" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page6#seu52#su70#rcond10" name="RoleCondition6" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+      <Link id="sv3#page6#seu52#ln126" name="Flow57" to="sv3#page6#pwu12" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#page6#seu53" name="Selector21" gr:x="675" gr:y="135" entity="ent2">
+      <Selector id="sv3#page6#seu53#su71" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page6#seu53#su71#rcond11" name="RoleCondition2" predicate="in" implied="false" role="rel4#role7"/>
+        <AttributesCondition id="sv3#page6#seu53#su71#acond30" name="AttCondition30" predicate="eq" booleanOperator="and" implied="false" attributes="ent2#att26" value="2"/>
+      </Selector>
+      <Link id="sv3#page6#seu53#ln127" name="Flow56" to="sv3#page6#seu52" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+    <PowerIndexUnit id="sv3#page6#pwu12" name="Geocachers No Encontrados" gr:x="685" gr:y="450" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4">
+      <Selector id="sv3#page6#pwu12#su72" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page6#pwu12#su72#kcond46" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -142,7 +164,13 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page6#pwu12">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

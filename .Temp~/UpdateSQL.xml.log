@@ -1,26 +1,28 @@
-[01 may 2023 17:50:58] DEBUG Executing SQL script
-[01 may 2023 17:50:58] INFO ================================================================================
-[01 may 2023 17:50:58] INFO onError= 'stop'
-[01 may 2023 17:50:58] INFO autoCommit= 'false'
-[01 may 2023 17:50:58] INFO username= 'postgres'
-[01 may 2023 17:50:58] INFO outputPath= 'D:\Users\fjavi\Desktop\workspace\Geocaching\.Temp~\UpdateSQL.xml'
-[01 may 2023 17:50:58] INFO outputLogPath= 'D:\Users\fjavi\Desktop\workspace\Geocaching\.Temp~\UpdateSQL.xml.log'
-[01 may 2023 17:50:58] INFO encoding= ''
-[01 may 2023 17:50:58] INFO driverClass= 'org.postgresql.Driver'
-[01 may 2023 17:50:58] INFO sqlScript= 'D:\Users\fjavi\Desktop\workspace\Geocaching\.Temp~\UpdateSQL.sql'
-[01 may 2023 17:50:58] INFO eventSocketPort= '62899'
-[01 may 2023 17:50:58] INFO statementSeparator= ';'
-[01 may 2023 17:50:58] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[01 may 2023 17:50:58] INFO password= 'admin'
-[01 may 2023 17:50:58] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
-[01 may 2023 17:50:58] INFO ================================================================================
-[01 may 2023 17:50:58] INFO Connecting to the Database...
-[01 may 2023 17:50:58] INFO Database connection estabilished
-[01 may 2023 17:50:58] INFO transaction isolation: 2
-[01 may 2023 17:50:58] DEBUG ================================================================================
-[01 may 2023 17:50:58] DEBUG Executing SQL script file: D:\Users\fjavi\Desktop\workspace\Geocaching\.Temp~\UpdateSQL.sql
-[01 may 2023 17:50:58] DEBUG Executing statement:  create view "public"."user_amigos_view" as select AL1."oid" as "oid", count(distinct AL2."user_oid_2") as "der_attr" from  "public"."user" AL1 left outer join "public"."user_user" AL2 on AL1."oid"=AL2."user_oid" group by AL1."oid"
-[01 may 2023 17:50:58] DEBUG ================================================================================
-[01 may 2023 17:50:58] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[01 may 2023 17:50:58] INFO Database connection closed
-[01 may 2023 17:50:58] DEBUG Total time: 205 milliseconds
+[07 may 2023 13:21:15] DEBUG Executing SQL script
+[07 may 2023 13:21:15] INFO ================================================================================
+[07 may 2023 13:21:15] INFO onError= 'stop'
+[07 may 2023 13:21:15] INFO autoCommit= 'false'
+[07 may 2023 13:21:15] INFO username= 'postgres'
+[07 may 2023 13:21:15] INFO outputPath= 'D:\Users\fjavi\Desktop\workspace\Geocaching\.Temp~\UpdateSQL.xml'
+[07 may 2023 13:21:15] INFO outputLogPath= 'D:\Users\fjavi\Desktop\workspace\Geocaching\.Temp~\UpdateSQL.xml.log'
+[07 may 2023 13:21:15] INFO encoding= ''
+[07 may 2023 13:21:15] INFO driverClass= 'org.postgresql.Driver'
+[07 may 2023 13:21:15] INFO sqlScript= 'D:\Users\fjavi\Desktop\workspace\Geocaching\.Temp~\UpdateSQL.sql'
+[07 may 2023 13:21:15] INFO eventSocketPort= '54350'
+[07 may 2023 13:21:15] INFO statementSeparator= ';'
+[07 may 2023 13:21:15] INFO derby.system.home= 'D:\Apps\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[07 may 2023 13:21:15] INFO password= 'admin'
+[07 may 2023 13:21:15] INFO url= 'jdbc:postgresql://localhost:5432/Geocaching'
+[07 may 2023 13:21:15] INFO ================================================================================
+[07 may 2023 13:21:15] INFO Connecting to the Database...
+[07 may 2023 13:21:15] INFO Database connection estabilished
+[07 may 2023 13:21:15] INFO transaction isolation: 2
+[07 may 2023 13:21:15] DEBUG ================================================================================
+[07 may 2023 13:21:15] DEBUG Executing SQL script file: D:\Users\fjavi\Desktop\workspace\Geocaching\.Temp~\UpdateSQL.sql
+[07 may 2023 13:21:15] DEBUG Executing statement:  create table "public"."founded_value" ( "oid"  int4  not null, "value"  varchar(255), primary key ("oid") )
+[07 may 2023 13:21:15] DEBUG Executing statement:    alter table "public"."founded_geocach"  add column  "founded_value_oid"  int4
+[07 may 2023 13:21:15] DEBUG Executing statement:  alter table "public"."founded_geocach"   add constraint fk_founded_geocach_founded_val foreign key ("founded_value_oid") references "public"."founded_value" ("oid")
+[07 may 2023 13:21:15] DEBUG ================================================================================
+[07 may 2023 13:21:15] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[07 may 2023 13:21:15] INFO Database connection closed
+[07 may 2023 13:21:15] DEBUG Total time: 228 milliseconds
