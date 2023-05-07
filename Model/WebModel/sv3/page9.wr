@@ -1,27 +1,51 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page9" name="Geocach" gr:x="1385" gr:y="-100">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page9" name="Geocach" gr:x="1670" gr:y="-245">
   <ContentUnits>
-    <DataUnit id="sv3#page9#dau1" name="Geocach" linkOrder="sv3#page9#dau1#ln39" gr:x="0" gr:y="175" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4">
+    <DataUnit id="sv3#page9#dau1" name="Geocach" linkOrder="sv3#page9#dau1#ln39 sv3#page9#dau1#ln72" gr:x="0" gr:y="340" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4">
       <Selector id="sv3#page9#dau1#su32" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page9#dau1#su32#kcond22" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#page9#dau1#ln39" name="Founded" to="sv3#tmu3" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page9#dau1#ln39" name="Founded" to="sv3#seu43" type="normal" validate="true">
+        <LinkParameter id="sv3#page9#dau1#ln39#par156" name="oid_geocach" source="data.ent1#att1" target="sv3#seu43#su57#acond24"/>
+      </Link>
       <Link id="sv3#page9#dau1#ln41" name="Flow26" to="sv3#cru4" type="transport" automaticCoupling="true" validate="true"/>
       <Link id="sv3#page9#dau1#ln42" name="Flow41" to="sv3#seu23" type="transport" validate="true">
         <LinkParameter id="sv3#page9#dau1#ln42#par86" name="dificulty_KeyCondition22 [oid]" source="data.ent1#att10" target="sv3#seu23#su31#kcond21.ent3#att9"/>
       </Link>
+      <Link id="sv3#page9#dau1#ln69" name="Flow41" to="sv3#seu31" type="transport" validate="true">
+        <LinkParameter id="sv3#page9#dau1#ln69#par115" name="dificulty_KeyCondition22 [oid]" source="data.ent1#att10" target="sv3#seu31#su43#kcond28.ent3#att9"/>
+      </Link>
+      <Link id="sv3#page9#dau1#ln70" name="Flow26" to="sv3#cru7" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page9#dau1#ln72" name="Not Founded" to="sv3#seu37" type="normal" validate="true">
+        <LinkParameter id="sv3#page9#dau1#ln72#par140" name="oid_geocach" source="data.ent1#att1" target="sv3#seu37#su50#acond16"/>
+      </Link>
+      <Link id="sv3#page9#dau1#ln76" name="Flow76" to="sv3#seu22" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="-91,17,104,12"/>
+      <Link id="sv3#page9#dau1#ln121" name="Flow41" to="sv3#seu50" type="transport" validate="true">
+        <LinkParameter id="sv3#page9#dau1#ln121#par196" name="dificulty_KeyCondition22 [oid]" source="data.ent1#att10" target="sv3#seu50#su68#kcond44.ent3#att9"/>
+      </Link>
     </DataUnit>
-    <PowerIndexUnit id="sv3#page9#pwu9" name="Hist&#243;rico" gr:x="215" gr:y="140" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName">
+    <PowerIndexUnit id="sv3#page9#pwu9" name="Hist&#243;rico Usuarios Encontrados" gr:x="265" gr:y="210" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName">
       <Selector id="sv3#page9#pwu9#su33" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page9#pwu9#su33#kcond23" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
     </PowerIndexUnit>
-    <MultiMessageUnit id="sv3#page9#mssu5" name="Message5" gr:x="115" gr:y="235"/>
-    <SelectorUnit id="sv3#page9#seu24" name="selector user" gr:x="35" gr:y="0" entity="User">
+    <MultiMessageUnit id="sv3#page9#mssu5" name="Message5" gr:x="300" gr:y="355"/>
+    <SelectorUnit id="sv3#page9#seu24" name="selector user" gr:x="10" gr:y="205" entity="User">
       <Selector id="sv3#page9#seu24#su34" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#page9#seu24#su34#rcond3" name="RoleCondition3" predicate="in" implied="false" role="rel4#role8"/>
       </Selector>
       <Link id="sv3#page9#seu24#ln51" name="Flow50" to="sv3#page9#pwu9" type="transport" automaticCoupling="true" validate="true"/>
     </SelectorUnit>
+    <SelectorUnit id="sv3#page9#seu47" name="selector user" gr:x="0" gr:y="0" entity="User">
+      <Selector id="sv3#page9#seu47#su62" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page9#seu47#su62#rcond8" name="RoleCondition3" predicate="in" implied="false" role="rel4#role8"/>
+      </Selector>
+      <Link id="sv3#page9#seu47#ln90" name="Flow50" to="sv3#page9#pwu11" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+    <PowerIndexUnit id="sv3#page9#pwu11" name="Hist&#243;rico Usuarios NO Encontrados" gr:x="275" gr:y="5" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userName">
+      <Selector id="sv3#page9#pwu11#su63" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page9#pwu11#su63#kcond38" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -31,6 +55,7 @@
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att4"/>
           <layout:Link link="sv3#page9#dau1#ln39"/>
+          <layout:Link link="sv3#page9#dau1#ln72"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -66,6 +91,24 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page9#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page9#pwu11">
+          <layout:Attribute attribute="userName"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

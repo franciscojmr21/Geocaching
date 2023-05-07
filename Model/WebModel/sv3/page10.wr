@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page10" name="Edit Geocach" gr:x="575" gr:y="1470">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page10" name="Edit Geocach" gr:x="630" gr:y="1665">
   <ContentUnits>
     <EntryUnit id="sv3#page10#enu6" name="Editar Geocach" linkOrder="sv3#page10#enu6#ln26" gr:x="145" gr:y="0" entity="ent1" fieldOrder="sv3#page10#enu6#fld14 sv3#page10#enu6#fld5 sv3#page10#enu6#fld13 sv3#page10#enu6#sfld6 sv3#page10#enu6#sfld8 sv3#page10#enu6#sfld7">
       <Field id="sv3#page10#enu6#fld5" name="description" type="text" modifiable="true" attribute="ent1#att3"/>
